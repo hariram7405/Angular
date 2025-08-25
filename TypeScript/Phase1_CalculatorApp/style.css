@@ -1,0 +1,77 @@
+/* Basic styles for CalculatorApp */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.calculator-container {
+    background: #fff;
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 24px 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    text-align: center;
+}
+
+.display {
+    background: #222;
+    color: #fff;
+    font-size: 2rem;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    text-align: right;
+    letter-spacing: 1px;
+    min-height: 48px;
+}
+
+.input-field {
+    width: calc(100% - 32px);
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.button {
+    flex: 1;
+    padding: 16px 0;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 6px;
+    background: #e0e0e0;
+    color: #222;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin: 0 4px; /* Add margin between buttons */
+}
+
+.button.operator {
+    background: #ff9800;
+    color: #fff;
+}
+
+.button.equal {
+    background: #4caf50;
+    color: #fff;
+}
+
+.button:active {
+    background: #bdbdbd;
+}
+
+.button.operator:active,
+.button.equal:active {
+    background: #333;
+}
