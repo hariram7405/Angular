@@ -190,6 +190,13 @@ This project is open source and available under the MIT License.
 - 🎨 More themes and board designs
 
 ---
+## 🌐 Live Demo
+
+Play the Snakes & Ladders game instantly in your browser:
+
+👉 [Snakes & Ladders – Project 2 Demo](https://github.com/hariram7405/Angular/blob/main/TypeScript/Project2/index.html)  
+*(Open the HTML file directly in your browser or host via GitHub Pages for best experience)*
+
 
 **Enjoy playing Snakes & Ladders!** 🎮✨
 
