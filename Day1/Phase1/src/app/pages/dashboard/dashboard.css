@@ -1,0 +1,43 @@
+.dashboard h2 {
+  color: var(--dark);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.dashboard h3 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-dot {
+  font-size: 1.5rem;
+}
+
+.activity-item small {
+  margin-left: auto;
+  color: var(--secondary);
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.action-buttons .btn {
+  width: 100%;
+  text-align: center;
+}
