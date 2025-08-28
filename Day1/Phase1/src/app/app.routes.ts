@@ -4,11 +4,8 @@ import { BugsComponent } from './pages/bugs/bugs';
 import { LoginComponent } from './pages/login/login';
 
 export const routes: Routes = [
-    {path:'',redirectTo:'dashboard',pathMatch:'full'},
     {path:'dashboard',component:DashboardComponent,title:'Dashboard'},
     {path:'bugs',component:BugsComponent,title:'Bugs'},
- 
     {path:'login',component:LoginComponent,title:'login'},
     {path:'**',redirectTo:'dashboard'}
-    
 ];

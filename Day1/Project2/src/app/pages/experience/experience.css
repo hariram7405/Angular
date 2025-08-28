@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--primary-gradient);
+  min-height: 100vh;
+  color: var(--text-primary);
+  padding: 40px 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 50px;
+  font-family: 'Playfair Display', serif;
+}
+
+.experience-container {
+  background: white;
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: var(--shadow-light);
+  border: 1px solid #E2E8F0;
+  max-width: 1200px;
+  margin: auto;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--primary-gradient);
+}
+
+.experience-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  padding-left: 80px;
+  border-radius: 20px;
+  margin: 30px 0;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  animation: slideInRight 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.experience-card:nth-child(1) { animation-delay: 0.2s; }
+.experience-card:nth-child(2) { animation-delay: 0.4s; }
+
+.experience-card::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: -60px;
+  width: 20px;
+  height: 20px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 0 0 4px var(--secondary-color);
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+}
+
+.experience-card h3 {
+  font-size: 1.9rem;
+  margin-bottom: 15px;
+  color: var(--accent-color);
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+}
+
+.experience-card p {
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.experience-card ul {
+  padding-left: 25px;
+  line-height: 1.8;
+}
+
+.experience-card li {
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  font-family: 'Lora', serif;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .experience-card {
+    width: 100%;
+    margin-left: 0 !important;
+    padding: 30px;
+    margin: 20px 0;
+    padding-left: 60px;
+  }
+  
+  .experience-card::before {
+    left: -30px !important;
+  }
+}
