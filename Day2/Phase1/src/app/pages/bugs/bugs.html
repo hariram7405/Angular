@@ -1,0 +1,61 @@
+<div class="bugs-page fade-in">
+  <div class="dashboard-header">
+    <h2>Bug Tracker</h2>
+    <p-button label="Report New Bug" [raised]="true" class="p-button-primary"></p-button>
+  </div>
+  
+  <p-card class="slide-in">
+    <div style="display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
+      <select style="padding: 0.5rem; border: 1px solid var(--surface-border); border-radius: 6px; background: var(--surface-card); color: var(--text-color); min-width: 150px;">
+        <option>All Status</option>
+        <option>Open</option>
+        <option>In Progress</option>
+        <option>Resolved</option>
+      </select>
+      <select style="padding: 0.5rem; border: 1px solid var(--surface-border); border-radius: 6px; background: var(--surface-card); color: var(--text-color); min-width: 150px;">
+        <option>All Priority</option>
+        <option>High</option>
+        <option>Medium</option>
+        <option>Low</option>
+      </select>
+    </div>
+    
+    <div class="bug-list">
+      <div class="bug-item bug-priority-high">
+        <div class="bug-title">#001 - Login button not responsive</div>
+        <div class="bug-description">The login button becomes unresponsive on mobile devices</div>
+        <div class="bug-meta">
+          <span class="bug-status status-open">Open</span>
+          <div class="bug-assignee">
+            <div class="assignee-avatar">JD</div>
+            <span>John Doe</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bug-item bug-priority-medium">
+        <div class="bug-title">#002 - Dashboard loading slowly</div>
+        <div class="bug-description">Dashboard takes more than 5 seconds to load initial data</div>
+        <div class="bug-meta">
+          <span class="bug-status status-progress">In Progress</span>
+          <div class="bug-assignee">
+            <div class="assignee-avatar">JS</div>
+            <span>Jane Smith</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bug-item bug-priority-low">
+        <div class="bug-title">#003 - Typo in footer text</div>
+        <div class="bug-description">Minor spelling error in the footer copyright text</div>
+        <div class="bug-meta">
+          <span class="bug-status status-closed">Resolved</span>
+          <div class="bug-assignee">
+            <div class="assignee-avatar">MJ</div>
+            <span>Mike Johnson</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </p-card>
+</div>

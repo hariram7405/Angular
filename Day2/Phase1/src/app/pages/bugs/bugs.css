@@ -1,0 +1,20 @@
+/* Bug-specific styles that complement the global theme */
+.bugs-page {
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  
+  .p-grid {
+    flex-direction: column;
+  }
+  
+  .bug-item {
+    margin: 0.5rem 0;
+  }
+}

@@ -1,0 +1,15 @@
+<p-menubar [model]="menuItems">
+  <ng-template pTemplate="start">
+    <h2 style="margin: 0; color: white;">{{ title }}</h2>
+  </ng-template>
+</p-menubar>
+
+<main class="fade-in">
+  <div class="p-grid">
+    <div class="p-col-12">
+      <p-card class="main-content-card">
+        <router-outlet></router-outlet>
+      </p-card>
+    </div>
+  </div>
+</main>

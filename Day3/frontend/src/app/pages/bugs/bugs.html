@@ -1,0 +1,35 @@
+<div class="bugs-page fade-in">
+  <div class="dashboard-header">
+    <h2>Bug Tracker</h2>
+    <p-button label="Report New Bug" [raised]="true" class="p-button-primary"></p-button>
+  </div>
+  
+  <p-card class="slide-in">
+    <div class="filters">
+      <select class="filter-select">
+        <option>All Status</option>
+        <option>Open</option>
+        <option>In Progress</option>
+        <option>Resolved</option>
+      </select>
+    </div>
+    
+    <div class="bug-list">
+      <div class="bug-item" *ngFor="let bug of bugs">
+        <div class="bug-header">
+          <div class="bug-id">#{{bug.id}}</div>
+          <div class="bug-status" [ngClass]="'status-' + bug.status?.toLowerCase()">{{bug.status}}</div>
+        </div>
+        <div class="bug-title">{{bug.title}}</div>
+        <div class="bug-description">{{bug.description}}</div>
+        <div class="bug-footer">
+          <div class="bug-date">Created: {{bug.createdOn | date:'short'}}</div>
+          <div class="bug-project">Project: {{bug.projectId}}</div>
+        </div>
+      </div>
+      <div *ngIf="bugs.length === 0" class="no-bugs">
+        No bugs found.
+      </div>
+    </div>
+  </p-card>
+</div>

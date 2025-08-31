@@ -1,0 +1,48 @@
+<div class="dashboard fade-in">
+  <div class="dashboard-header">
+    <h2>Dashboard Overview</h2>
+  </div>
+  
+  <div class="dashboard-content">
+    <p-card class="stats-card slide-in">
+      <div class="stats-number">42</div>
+      <div class="stats-label">Total Projects</div>
+    </p-card>
+    <p-card class="stats-card slide-in">
+      <div class="stats-number">18</div>
+      <div class="stats-label">Completed Tasks</div>
+    </p-card>
+    <p-card class="stats-card slide-in">
+      <div class="stats-number">7</div>
+      <div class="stats-label">Pending Issues</div>
+    </p-card>
+
+    <p-card class="slide-in">
+      <h3 style="margin-bottom: 1rem; color: var(--text-color);">Recent Activity</h3>
+      <div class="activity-item">
+        <span class="activity-dot" style="color: var(--green-500);">•</span>
+        <span>Project Alpha completed</span>
+        <small style="color: var(--text-color-secondary);">2 hours ago</small>
+      </div>
+      <div class="activity-item">
+        <span class="activity-dot" style="color: var(--orange-500);">•</span>
+        <span>Bug #123 reported</span>
+        <small style="color: var(--text-color-secondary);">4 hours ago</small>
+      </div>
+      <div class="activity-item">
+        <span class="activity-dot" style="color: var(--primary-color);">•</span>
+        <span>New user registered</span>
+        <small style="color: var(--text-color-secondary);">1 day ago</small>
+      </div>
+    </p-card>
+    
+    <p-card class="slide-in">
+      <h3 style="margin-bottom: 1rem; color: var(--text-color);">Quick Actions</h3>
+      <div class="action-buttons">
+        <p-button label="Create Project" [raised]="true" class="p-button-primary"></p-button>
+        <p-button label="Add Task" [raised]="true" class="p-button-primary"></p-button>
+        <p-button label="Generate Report" [raised]="true" class="p-button-primary"></p-button>
+      </div>
+    </p-card>
+  </div>
+</div>
