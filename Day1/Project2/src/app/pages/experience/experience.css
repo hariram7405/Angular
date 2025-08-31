@@ -107,19 +107,62 @@ h1 {
   transform: translateY(-5px);
 }
 
+.company-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.company-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+}
+
+.company-info {
+  flex: 1;
+}
+
 .experience-card h3 {
   font-size: 1.9rem;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
   color: var(--accent-color);
   font-weight: 600;
   font-family: 'Playfair Display', serif;
 }
 
-.experience-card p {
-  font-style: italic;
+.position-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.role {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  font-family: 'Lora', serif;
+}
+
+.duration {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  background: rgba(14, 165, 233, 0.1);
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.location {
+  font-size: 1rem;
   color: var(--text-secondary);
-  margin-bottom: 25px;
-  font-size: 1.1rem;
   font-weight: 500;
 }
 

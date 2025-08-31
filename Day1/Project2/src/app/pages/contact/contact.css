@@ -74,15 +74,16 @@ h1 {
   text-decoration: none;
 }
 
-.profiles ul {
-  list-style: none;
+.profile-links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
 }
 
-.profiles li a {
-  display: block;
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   padding: 15px;
   background: rgba(52, 152, 219, 0.1);
   border-radius: 10px;
@@ -93,7 +94,13 @@ h1 {
   border: 2px solid transparent;
 }
 
-.profiles li a:hover {
+.profile-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.profile-link:hover {
   background: var(--secondary-color);
   color: white;
   transform: translateY(-3px);
@@ -155,7 +162,7 @@ h1 {
     font-size: 2.2rem;
   }
   
-  .profiles ul {
+  .profile-links {
     grid-template-columns: 1fr;
   }
 }
