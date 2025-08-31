@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap');
+@import 'primeicons/primeicons.css';
+@import 'primeng/resources/themes/lara-light-blue/theme.css';
+@import 'primeng/resources/primeng.min.css';
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #F1F5F9 0%, #F1F5F9 100%);
+  --primary-color: #0F172A;
+  --secondary-color: #0EA5E9;
+  --accent-color: #EF4444;
+  --light-color: #F1F5F9;
+  --neutral-color: #334155;
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --bg-glass: rgba(255, 255, 255, 0.95);
+  --shadow-light: 0 8px 25px rgba(15, 23, 42, 0.1);
+  --shadow-hover: 0 15px 35px rgba(15, 23, 42, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--primary-gradient);
+  min-height: 100vh;
+  color: var(--text-primary);
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+p, li {
+  font-family: 'Lora', serif;
+  line-height: 1.7;
+}
