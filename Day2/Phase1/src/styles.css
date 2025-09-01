@@ -1,7 +1,7 @@
-/* ✅ PrimeNG Lara Dark Blue Theme */
-@import 'primeng/resources/themes/lara-dark-blue/theme.css';
-@import 'primeng/resources/primeng.css';
-@import 'primeicons/primeicons.css';
+/* ✅ PrimeNG Lara Dark Blue Theme - CDN */
+@import url('https://cdn.jsdelivr.net/npm/primeng@17.18.15/resources/themes/lara-dark-blue/theme.css');
+@import url('https://cdn.jsdelivr.net/npm/primeng@17.18.15/resources/primeng.min.css');
+@import url('https://cdn.jsdelivr.net/npm/primeicons@7.0.0/primeicons.css');
 
 * {
   box-sizing: border-box;

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap');
-@import 'primeicons/primeicons.css';
-@import 'primeng/resources/themes/lara-light-blue/theme.css';
-@import 'primeng/resources/primeng.css';
+@import url('https://cdn.jsdelivr.net/npm/primeicons@7.0.0/primeicons.css');
+@import url('https://cdn.jsdelivr.net/npm/primeng@17.18.15/resources/themes/lara-light-blue/theme.css');
+@import url('https://cdn.jsdelivr.net/npm/primeng@17.18.15/resources/primeng.min.css');
 
 :root {
   --primary-gradient: linear-gradient(135deg, #F1F5F9 0%, #F1F5F9 100%);
