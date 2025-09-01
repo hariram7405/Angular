@@ -1,4 +1,4 @@
-name: Deploy Angular Projects
+name: Deploy Angular Training Projects
 
 on:
   push:
@@ -11,20 +11,20 @@ permissions:
   id-token: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Setup Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '18'
     
     - name: Install Angular CLI
       run: npm install -g @angular/cli
     
-    - name: Build and Deploy
+    - name: Build projects
       run: |
         mkdir -p deploy
         
@@ -32,7 +32,6 @@ jobs:
         cd Day1/Phase1
         npm install --legacy-peer-deps
         ng build --base-href="/Angular/day1-phase1/"
-        cp -r dist/*/* ../../deploy/
         mkdir -p ../../deploy/day1-phase1
         cp -r dist/*/* ../../deploy/day1-phase1/
         cd ../..
@@ -61,6 +60,30 @@ jobs:
         cp -r dist/*/* ../../deploy/day2-project2/
         cd ../..
         
+        # Build Day3 Frontend
+        cd Day3/frontend
+        npm install --legacy-peer-deps
+        ng build --base-href="/Angular/day3-frontend/"
+        mkdir -p ../../deploy/day3-frontend
+        cp -r dist/*/* ../../deploy/day3-frontend/
+        cd ../..
+        
+        # Build Day4 Frontend
+        cd Day4/frontend
+        npm install --legacy-peer-deps
+        ng build --base-href="/Angular/day4-frontend/"
+        mkdir -p ../../deploy/day4-frontend
+        cp -r dist/*/* ../../deploy/day4-frontend/
+        cd ../..
+        
+        # Deploy TypeScript Calculator App
+        mkdir -p deploy/typescript-calculator
+        cp -r TypeScript/Phase1_CalculatorApp/* deploy/typescript-calculator/
+        
+        # Deploy TypeScript Snake Ladder Game
+        mkdir -p deploy/typescript-game
+        cp -r TypeScript/Project2/* deploy/typescript-game/
+        
         # Create main index
         cat > deploy/index.html << 'EOF'
         <!DOCTYPE html>
@@ -69,9 +92,11 @@ jobs:
             <title>Angular Training Projects</title>
             <style>
                 body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
-                .container { max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; }
-                h1 { text-align: center; color: #333; }
-                .project { margin: 20px 0; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+                .container { max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; }
+                h1 { text-align: center; color: #333; margin-bottom: 40px; }
+                .section { margin-bottom: 30px; }
+                .section h2 { color: #555; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
+                .project { margin: 15px 0; padding: 15px; border: 1px solid #ddd; border-radius: 8px; }
                 .project a { color: #007bff; text-decoration: none; font-weight: bold; }
                 .project a:hover { text-decoration: underline; }
             </style>
@@ -79,21 +104,45 @@ jobs:
         <body>
             <div class="container">
                 <h1>🚀 Angular Training Projects</h1>
-                <div class="project">
-                    <h3>Day 1 - Phase 1</h3>
-                    <a href="./day1-phase1/">View Project →</a>
+                
+                <div class="section">
+                    <h2>Angular Projects</h2>
+                    <div class="project">
+                        <h3>Day 1 - Phase 1</h3>
+                        <a href="./day1-phase1/">View Project →</a>
+                    </div>
+                    <div class="project">
+                        <h3>Day 1 - Project 2</h3>
+                        <a href="./day1-project2/">View Project →</a>
+                    </div>
+                    <div class="project">
+                        <h3>Day 2 - Phase 1</h3>
+                        <a href="./day2-phase1/">View Project →</a>
+                    </div>
+                    <div class="project">
+                        <h3>Day 2 - Project 2</h3>
+                        <a href="./day2-project2/">View Project →</a>
+                    </div>
+                    <div class="project">
+                        <h3>Day 3 - Frontend</h3>
+                        <a href="./day3-frontend/">View Project →</a>
+                    </div>
+                    <div class="project">
+                        <h3>Day 4 - Frontend</h3>
+                        <a href="./day4-frontend/">View Project →</a>
+                    </div>
                 </div>
-                <div class="project">
-                    <h3>Day 1 - Project 2</h3>
-                    <a href="./day1-project2/">View Project →</a>
-                </div>
-                <div class="project">
-                    <h3>Day 2 - Phase 1</h3>
-                    <a href="./day2-phase1/">View Project →</a>
-                </div>
-                <div class="project">
-                    <h3>Day 2 - Project 2</h3>
-                    <a href="./day2-project2/">View Project →</a>
+                
+                <div class="section">
+                    <h2>TypeScript Projects</h2>
+                    <div class="project">
+                        <h3>Calculator App</h3>
+                        <a href="./typescript-calculator/">View Project →</a>
+                    </div>
+                    <div class="project">
+                        <h3>Snake & Ladder Game</h3>
+                        <a href="./typescript-game/">View Project →</a>
+                    </div>
                 </div>
             </div>
         </body>
@@ -101,9 +150,17 @@ jobs:
         EOF
     
     - name: Upload Pages artifact
-      uses: actions/upload-pages-artifact@v2
+      uses: actions/upload-pages-artifact@v3
       with:
         path: ./deploy
-        
+  
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
     - name: Deploy to GitHub Pages
-      uses: actions/deploy-pages@v2
+      id: deployment
+      uses: actions/deploy-pages@v4
