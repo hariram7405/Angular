@@ -28,53 +28,70 @@ jobs:
       run: |
         mkdir -p deploy
         
+        # Try to build Angular projects, continue on failure
+        set +e
+        
         # Build Day1 Phase1
-        cd Day1/Phase1
-        npm install --legacy-peer-deps
-        ng build --base-href="/Angular/day1-phase1/"
-        mkdir -p ../../deploy/day1-phase1
-        cp -r dist/day1/browser/* ../../deploy/day1-phase1/ 2>/dev/null || cp -r dist/*/browser/* ../../deploy/day1-phase1/ 2>/dev/null || echo "Build output copied"
-        cd ../..
+        if cd Day1/Phase1 && npm install --legacy-peer-deps && ng build --base-href="/Angular/day1-phase1/"; then
+          mkdir -p ../../deploy/day1-phase1
+          cp -r dist/*/browser/* ../../deploy/day1-phase1/ 2>/dev/null || cp -r dist/*/* ../../deploy/day1-phase1/ 2>/dev/null
+          cd ../..
+        else
+          echo "Day1 Phase1 build failed, skipping"
+          cd ../.. 2>/dev/null || true
+        fi
         
         # Build Day1 Project2
-        cd Day1/Project2
-        npm install --legacy-peer-deps
-        ng build --base-href="/Angular/day1-project2/"
-        mkdir -p ../../deploy/day1-project2
-        cp -r dist/project2/browser/* ../../deploy/day1-project2/ 2>/dev/null || cp -r dist/*/browser/* ../../deploy/day1-project2/ 2>/dev/null || echo "Build output copied"
-        cd ../..
+        if cd Day1/Project2 && npm install --legacy-peer-deps && ng build --base-href="/Angular/day1-project2/"; then
+          mkdir -p ../../deploy/day1-project2
+          cp -r dist/*/browser/* ../../deploy/day1-project2/ 2>/dev/null || cp -r dist/*/* ../../deploy/day1-project2/ 2>/dev/null
+          cd ../..
+        else
+          echo "Day1 Project2 build failed, skipping"
+          cd ../.. 2>/dev/null || true
+        fi
         
         # Build Day2 Phase1
-        cd Day2/Phase1
-        npm install --legacy-peer-deps
-        ng build --base-href="/Angular/day2-phase1/"
-        mkdir -p ../../deploy/day2-phase1
-        cp -r dist/*/browser/* ../../deploy/day2-phase1/ 2>/dev/null || echo "Build output copied"
-        cd ../..
+        if cd Day2/Phase1 && npm install --legacy-peer-deps && ng build --base-href="/Angular/day2-phase1/"; then
+          mkdir -p ../../deploy/day2-phase1
+          cp -r dist/*/browser/* ../../deploy/day2-phase1/ 2>/dev/null || cp -r dist/*/* ../../deploy/day2-phase1/ 2>/dev/null
+          cd ../..
+        else
+          echo "Day2 Phase1 build failed, skipping"
+          cd ../.. 2>/dev/null || true
+        fi
         
         # Build Day2 Project2
-        cd Day2/Project2
-        npm install --legacy-peer-deps
-        ng build --base-href="/Angular/day2-project2/"
-        mkdir -p ../../deploy/day2-project2
-        cp -r dist/*/browser/* ../../deploy/day2-project2/ 2>/dev/null || echo "Build output copied"
-        cd ../..
+        if cd Day2/Project2 && npm install --legacy-peer-deps && ng build --base-href="/Angular/day2-project2/"; then
+          mkdir -p ../../deploy/day2-project2
+          cp -r dist/*/browser/* ../../deploy/day2-project2/ 2>/dev/null || cp -r dist/*/* ../../deploy/day2-project2/ 2>/dev/null
+          cd ../..
+        else
+          echo "Day2 Project2 build failed, skipping"
+          cd ../.. 2>/dev/null || true
+        fi
         
         # Build Day3 Frontend
-        cd Day3/frontend
-        npm install --legacy-peer-deps
-        ng build --base-href="/Angular/day3-frontend/"
-        mkdir -p ../../deploy/day3-frontend
-        cp -r dist/*/browser/* ../../deploy/day3-frontend/ 2>/dev/null || echo "Build output copied"
-        cd ../..
+        if cd Day3/frontend && npm install --legacy-peer-deps && ng build --base-href="/Angular/day3-frontend/"; then
+          mkdir -p ../../deploy/day3-frontend
+          cp -r dist/*/browser/* ../../deploy/day3-frontend/ 2>/dev/null || cp -r dist/*/* ../../deploy/day3-frontend/ 2>/dev/null
+          cd ../..
+        else
+          echo "Day3 frontend build failed, skipping"
+          cd ../.. 2>/dev/null || true
+        fi
         
         # Build Day4 Frontend
-        cd Day4/frontend
-        npm install --legacy-peer-deps
-        ng build --base-href="/Angular/day4-frontend/"
-        mkdir -p ../../deploy/day4-frontend
-        cp -r dist/*/browser/* ../../deploy/day4-frontend/ 2>/dev/null || echo "Build output copied"
-        cd ../..
+        if cd Day4/frontend && npm install --legacy-peer-deps && ng build --base-href="/Angular/day4-frontend/"; then
+          mkdir -p ../../deploy/day4-frontend
+          cp -r dist/*/browser/* ../../deploy/day4-frontend/ 2>/dev/null || cp -r dist/*/* ../../deploy/day4-frontend/ 2>/dev/null
+          cd ../..
+        else
+          echo "Day4 frontend build failed, skipping"
+          cd ../.. 2>/dev/null || true
+        fi
+        
+        set -e
         
         # Deploy TypeScript Calculator App
         mkdir -p deploy/typescript-calculator
@@ -83,6 +100,9 @@ jobs:
         # Deploy TypeScript Snake Ladder Game
         mkdir -p deploy/typescript-game
         cp -r TypeScript/Project2/* deploy/typescript-game/
+        
+        # Add .nojekyll file
+        touch deploy/.nojekyll
         
         # Create main index
         cat > deploy/index.html << 'EOF'

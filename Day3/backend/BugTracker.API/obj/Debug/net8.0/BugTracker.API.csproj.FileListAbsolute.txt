@@ -1433,7 +1433,6 @@ C:\Users\harirl\source\repos\Angular Training\Day3\backend\BugTracker.API\obj\De
 C:\Users\harirl\source\repos\Angular Training\Day3\backend\BugTracker.API\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\harirl\source\repos\Angular Training\Day3\backend\BugTracker.API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\harirl\source\repos\Angular Training\Day3\backend\BugTracker.API\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\harirl\source\repos\Angular Training\Day3\backend\BugTracker.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\harirl\source\repos\Angular Training\Day3\backend\BugTracker.API\obj\Debug\net8.0\BugTrack.02D7DF4B.Up2Date
 C:\Users\harirl\source\repos\Angular Training\Day3\backend\BugTracker.API\obj\Debug\net8.0\BugTracker.API.dll
 C:\Users\harirl\source\repos\Angular Training\Day3\backend\BugTracker.API\obj\Debug\net8.0\refint\BugTracker.API.dll

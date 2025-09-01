@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
-
 import { CheckboxModule } from 'primeng/checkbox';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from '../../services/authservice';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -20,20 +21,24 @@ export class LoginComponent {
   rememberMe: boolean = false;
   isLoading: boolean = false;
 
+  constructor(private authService: AuthService, private router: Router) {}
+
   onLogin() {
     if (this.username && this.password) {
       this.isLoading = true;
       
-      // Simulate API call
-      setTimeout(() => {
-        console.log('Login attempt:', { 
-          username: this.username, 
-          password: this.password, 
-          rememberMe: this.rememberMe 
-        });
-        this.isLoading = false;
-        // Add your authentication logic here
-      }, 1500);
+      this.authService.login(this.username, this.password).subscribe({
+        next: (response) => {
+          this.authService.saveToken(response.token);
+          this.isLoading = false;
+          this.router.navigate(['/dashboard']);
+        },
+        error: (error) => {
+          console.error('Login failed:', error);
+          this.isLoading = false;
+          alert('Login failed! Try admin/password');
+        }
+      });
     }
   }
 }

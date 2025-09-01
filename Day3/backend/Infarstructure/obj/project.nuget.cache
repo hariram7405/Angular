@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6m/FwdQV3Wk=",
+  "dgSpecHash": "yrhx+k/PTEA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day3\\backend\\Infarstructure\\BugTracker.Infrastructure.csproj",
+  "projectFilePath": "c:\\Users\\harirl\\source\\repos\\Angular Training\\Day3\\backend\\Infarstructure\\BugTracker.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\harirl\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\harirl\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

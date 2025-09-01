@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day3\\backend\\Core\\BugTracker.Core.csproj": {}
+    "c:\\Users\\harirl\\source\\repos\\Angular Training\\Day3\\backend\\Core\\BugTracker.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day3\\backend\\Core\\BugTracker.Core.csproj": {
+    "c:\\Users\\harirl\\source\\repos\\Angular Training\\Day3\\backend\\Core\\BugTracker.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day3\\backend\\Core\\BugTracker.Core.csproj",
+        "projectUniqueName": "c:\\Users\\harirl\\source\\repos\\Angular Training\\Day3\\backend\\Core\\BugTracker.Core.csproj",
         "projectName": "BugTracker.Core",
-        "projectPath": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day3\\backend\\Core\\BugTracker.Core.csproj",
+        "projectPath": "c:\\Users\\harirl\\source\\repos\\Angular Training\\Day3\\backend\\Core\\BugTracker.Core.csproj",
         "packagesPath": "C:\\Users\\harirl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day3\\backend\\Core\\obj\\",
+        "outputPath": "c:\\Users\\harirl\\source\\repos\\Angular Training\\Day3\\backend\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
