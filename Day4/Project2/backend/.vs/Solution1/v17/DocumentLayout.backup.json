@@ -1,0 +1,808 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8C05136A-C746-4783-863B-8AAB5FE00230}|BugTracker.API\\BugTracker.API.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\bugtracker.api\\controllers\\bugcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C05136A-C746-4783-863B-8AAB5FE00230}|BugTracker.API\\BugTracker.API.csproj|solutionrelative:bugtracker.api\\controllers\\bugcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|solutionrelative:core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C05136A-C746-4783-863B-8AAB5FE00230}|BugTracker.API\\BugTracker.API.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\bugtracker.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C05136A-C746-4783-863B-8AAB5FE00230}|BugTracker.API\\BugTracker.API.csproj|solutionrelative:bugtracker.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C05136A-C746-4783-863B-8AAB5FE00230}|BugTracker.API\\BugTracker.API.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\bugtracker.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8C05136A-C746-4783-863B-8AAB5FE00230}|BugTracker.API\\BugTracker.API.csproj|solutionrelative:bugtracker.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C05136A-C746-4783-863B-8AAB5FE00230}|BugTracker.API\\BugTracker.API.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\bugtracker.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C05136A-C746-4783-863B-8AAB5FE00230}|BugTracker.API\\BugTracker.API.csproj|solutionrelative:bugtracker.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\core\\entities\\bug.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|solutionrelative:core\\entities\\bug.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C05136A-C746-4783-863B-8AAB5FE00230}|BugTracker.API\\BugTracker.API.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\bugtracker.api\\bugtracker.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8C05136A-C746-4783-863B-8AAB5FE00230}|BugTracker.API\\BugTracker.API.csproj|solutionrelative:bugtracker.api\\bugtracker.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\core\\dtos\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|solutionrelative:core\\dtos\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\core\\dtos\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|solutionrelative:core\\dtos\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C05136A-C746-4783-863B-8AAB5FE00230}|BugTracker.API\\BugTracker.API.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\bugtracker.api\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C05136A-C746-4783-863B-8AAB5FE00230}|BugTracker.API\\BugTracker.API.csproj|solutionrelative:bugtracker.api\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C05136A-C746-4783-863B-8AAB5FE00230}|BugTracker.API\\BugTracker.API.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\bugtracker.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C05136A-C746-4783-863B-8AAB5FE00230}|BugTracker.API\\BugTracker.API.csproj|solutionrelative:bugtracker.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\core\\dtos\\errorresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|solutionrelative:core\\dtos\\errorresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\core\\dtos\\bugrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|solutionrelative:core\\dtos\\bugrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harirl\\source\\repos\\.Net Training\\Day19\\Solution1\\BugTrcaker.MVC\\Views\\Bugs\\Details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harirl\\source\\repos\\.Net Training\\Day19\\Solution1\\BugTrcaker.MVC\\Views\\Bugs\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C05136A-C746-4783-863B-8AAB5FE00230}|BugTracker.API\\BugTracker.API.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\bugtracker.api\\extension\\middlewareextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C05136A-C746-4783-863B-8AAB5FE00230}|BugTracker.API\\BugTracker.API.csproj|solutionrelative:bugtracker.api\\extension\\middlewareextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C05136A-C746-4783-863B-8AAB5FE00230}|BugTracker.API\\BugTracker.API.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\bugtracker.api\\middleware\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C05136A-C746-4783-863B-8AAB5FE00230}|BugTracker.API\\BugTracker.API.csproj|solutionrelative:bugtracker.api\\middleware\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\core\\exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|solutionrelative:core\\exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\core\\bugtracker.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|solutionrelative:core\\bugtracker.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\core\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|solutionrelative:core\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1FD1D1A-1145-4763-B7B1-632B2B070C69}|BugTrcaker.MVC\\BugTrcaker.MVC.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\bugtrcaker.mvc\\views\\bugview\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1FD1D1A-1145-4763-B7B1-632B2B070C69}|BugTrcaker.MVC\\BugTrcaker.MVC.csproj|solutionrelative:bugtrcaker.mvc\\views\\bugview\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1FD1D1A-1145-4763-B7B1-632B2B070C69}|BugTrcaker.MVC\\BugTrcaker.MVC.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\bugtrcaker.mvc\\views\\bugview\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1FD1D1A-1145-4763-B7B1-632B2B070C69}|BugTrcaker.MVC\\BugTrcaker.MVC.csproj|solutionrelative:bugtrcaker.mvc\\views\\bugview\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1FD1D1A-1145-4763-B7B1-632B2B070C69}|BugTrcaker.MVC\\BugTrcaker.MVC.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\bugtrcaker.mvc\\controllers\\bugviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1FD1D1A-1145-4763-B7B1-632B2B070C69}|BugTrcaker.MVC\\BugTrcaker.MVC.csproj|solutionrelative:bugtrcaker.mvc\\controllers\\bugviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C05136A-C746-4783-863B-8AAB5FE00230}|BugTracker.API\\BugTracker.API.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\bugtracker.api\\controllers\\bugviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C05136A-C746-4783-863B-8AAB5FE00230}|BugTracker.API\\BugTracker.API.csproj|solutionrelative:bugtracker.api\\controllers\\bugviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1FD1D1A-1145-4763-B7B1-632B2B070C69}|BugTrcaker.MVC\\BugTrcaker.MVC.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\bugtrcaker.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1FD1D1A-1145-4763-B7B1-632B2B070C69}|BugTrcaker.MVC\\BugTrcaker.MVC.csproj|solutionrelative:bugtrcaker.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1FD1D1A-1145-4763-B7B1-632B2B070C69}|BugTrcaker.MVC\\BugTrcaker.MVC.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\bugtrcaker.mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1FD1D1A-1145-4763-B7B1-632B2B070C69}|BugTrcaker.MVC\\BugTrcaker.MVC.csproj|solutionrelative:bugtrcaker.mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1FD1D1A-1145-4763-B7B1-632B2B070C69}|BugTrcaker.MVC\\BugTrcaker.MVC.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\bugtrcaker.mvc\\models\\bugviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1FD1D1A-1145-4763-B7B1-632B2B070C69}|BugTrcaker.MVC\\BugTrcaker.MVC.csproj|solutionrelative:bugtrcaker.mvc\\models\\bugviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1FD1D1A-1145-4763-B7B1-632B2B070C69}|BugTrcaker.MVC\\BugTrcaker.MVC.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\bugtrcaker.mvc\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1FD1D1A-1145-4763-B7B1-632B2B070C69}|BugTrcaker.MVC\\BugTrcaker.MVC.csproj|solutionrelative:bugtrcaker.mvc\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1FD1D1A-1145-4763-B7B1-632B2B070C69}|BugTrcaker.MVC\\BugTrcaker.MVC.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\bugtrcaker.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1FD1D1A-1145-4763-B7B1-632B2B070C69}|BugTrcaker.MVC\\BugTrcaker.MVC.csproj|solutionrelative:bugtrcaker.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1FD1D1A-1145-4763-B7B1-632B2B070C69}|BugTrcaker.MVC\\BugTrcaker.MVC.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\bugtrcaker.mvc\\bugtrcaker.mvc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E1FD1D1A-1145-4763-B7B1-632B2B070C69}|BugTrcaker.MVC\\BugTrcaker.MVC.csproj|solutionrelative:bugtrcaker.mvc\\bugtrcaker.mvc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5195097-2C94-42FC-873D-81F58C1AB5F5}|Infarstructure\\BugTracker.Infrastructure.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\infarstructure\\repositories\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5195097-2C94-42FC-873D-81F58C1AB5F5}|Infarstructure\\BugTracker.Infrastructure.csproj|solutionrelative:infarstructure\\repositories\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2C6B3BC-B925-4CB1-90AD-5653ACBAD744}|Application\\BugTracker.Application.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\application\\services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2C6B3BC-B925-4CB1-90AD-5653ACBAD744}|Application\\BugTracker.Application.csproj|solutionrelative:application\\services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\core\\interfaces\\iprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|solutionrelative:core\\interfaces\\iprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\core\\dtos\\projectresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|solutionrelative:core\\dtos\\projectresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\core\\dtos\\projectrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|solutionrelative:core\\dtos\\projectrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7F4331B-6C3E-44DC-BE1A-A96B8E870FF1}|BugTrackerTest\\BugTrackerTest.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\bugtrackertest\\services\\bugservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7F4331B-6C3E-44DC-BE1A-A96B8E870FF1}|BugTrackerTest\\BugTrackerTest.csproj|solutionrelative:bugtrackertest\\services\\bugservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\core\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|solutionrelative:core\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5195097-2C94-42FC-873D-81F58C1AB5F5}|Infarstructure\\BugTracker.Infrastructure.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\infarstructure\\data\\bugtrackercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5195097-2C94-42FC-873D-81F58C1AB5F5}|Infarstructure\\BugTracker.Infrastructure.csproj|solutionrelative:infarstructure\\data\\bugtrackercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\core\\dtos\\bugresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|solutionrelative:core\\dtos\\bugresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\core\\interfaces\\ibugrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|solutionrelative:core\\interfaces\\ibugrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\core\\interfaces\\ibugservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|solutionrelative:core\\interfaces\\ibugservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\core\\entities\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|solutionrelative:core\\entities\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5195097-2C94-42FC-873D-81F58C1AB5F5}|Infarstructure\\BugTracker.Infrastructure.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\infarstructure\\repositories\\bugrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5195097-2C94-42FC-873D-81F58C1AB5F5}|Infarstructure\\BugTracker.Infrastructure.csproj|solutionrelative:infarstructure\\repositories\\bugrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5195097-2C94-42FC-873D-81F58C1AB5F5}|Infarstructure\\BugTracker.Infrastructure.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\infarstructure\\data\\bugdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5195097-2C94-42FC-873D-81F58C1AB5F5}|Infarstructure\\BugTracker.Infrastructure.csproj|solutionrelative:infarstructure\\data\\bugdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2C6B3BC-B925-4CB1-90AD-5653ACBAD744}|Application\\BugTracker.Application.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\application\\services\\bugservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2C6B3BC-B925-4CB1-90AD-5653ACBAD744}|Application\\BugTracker.Application.csproj|solutionrelative:application\\services\\bugservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C05136A-C746-4783-863B-8AAB5FE00230}|BugTracker.API\\BugTracker.API.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\bugtracker.api\\bugtracker.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{8C05136A-C746-4783-863B-8AAB5FE00230}|BugTracker.API\\BugTracker.API.csproj|solutionrelative:bugtracker.api\\bugtracker.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2C6B3BC-B925-4CB1-90AD-5653ACBAD744}|Application\\BugTracker.Application.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2C6B3BC-B925-4CB1-90AD-5653ACBAD744}|Application\\BugTracker.Application.csproj|solutionrelative:application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\core\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C61AA5C2-1241-4460-9A82-6883C185C077}|Core\\BugTracker.Core.csproj|solutionrelative:core\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5195097-2C94-42FC-873D-81F58C1AB5F5}|Infarstructure\\BugTracker.Infrastructure.csproj|c:\\users\\harirl\\source\\repos\\angular training\\day4\\project2\\backend\\infarstructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5195097-2C94-42FC-873D-81F58C1AB5F5}|Infarstructure\\BugTracker.Infrastructure.csproj|solutionrelative:infarstructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 190,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 345,
+          "SelectedChildIndex": 32,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Core\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\Entities\\User.cs",
+              "RelativeToolTip": "Core\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T14:10:13.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTracker.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "BugTracker.API\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTracker.API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "BugTracker.API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T05:24:24.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthResponse.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\DTOs\\AuthResponse.cs",
+              "RelativeDocumentMoniker": "Core\\DTOs\\AuthResponse.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\DTOs\\AuthResponse.cs",
+              "RelativeToolTip": "Core\\DTOs\\AuthResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T05:07:57.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\DTOs\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "Core\\DTOs\\LoginRequest.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\DTOs\\LoginRequest.cs",
+              "RelativeToolTip": "Core\\DTOs\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T05:05:02.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MiddlewareExtension.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTracker.API\\Extension\\MiddlewareExtension.cs",
+              "RelativeDocumentMoniker": "BugTracker.API\\Extension\\MiddlewareExtension.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTracker.API\\Extension\\MiddlewareExtension.cs",
+              "RelativeToolTip": "BugTracker.API\\Extension\\MiddlewareExtension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T07:06:01.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GlobalExceptionMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTracker.API\\Middleware\\GlobalExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "BugTracker.API\\Middleware\\GlobalExceptionMiddleware.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTracker.API\\Middleware\\GlobalExceptionMiddleware.cs",
+              "RelativeToolTip": "BugTracker.API\\Middleware\\GlobalExceptionMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T07:06:00.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ValidationException.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\Exceptions\\ValidationException.cs",
+              "RelativeDocumentMoniker": "Core\\Exceptions\\ValidationException.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\Exceptions\\ValidationException.cs",
+              "RelativeToolTip": "Core\\Exceptions\\ValidationException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T07:06:00.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "BugTracker.Core.csproj",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\BugTracker.Core.csproj",
+              "RelativeDocumentMoniker": "Core\\BugTracker.Core.csproj",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\BugTracker.Core.csproj",
+              "RelativeToolTip": "Core\\BugTracker.Core.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-20T07:06:00.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "NotFoundException.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\Exceptions\\NotFoundException.cs",
+              "RelativeDocumentMoniker": "Core\\Exceptions\\NotFoundException.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\Exceptions\\NotFoundException.cs",
+              "RelativeToolTip": "Core\\Exceptions\\NotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T07:05:55.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ErrorResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\DTOs\\ErrorResponseDTO.cs",
+              "RelativeDocumentMoniker": "Core\\DTOs\\ErrorResponseDTO.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\DTOs\\ErrorResponseDTO.cs",
+              "RelativeToolTip": "Core\\DTOs\\ErrorResponseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T07:05:31.865Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTrcaker.MVC\\Views\\BugView\\Index.cshtml",
+              "RelativeDocumentMoniker": "BugTrcaker.MVC\\Views\\BugView\\Index.cshtml",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTrcaker.MVC\\Views\\BugView\\Index.cshtml",
+              "RelativeToolTip": "BugTrcaker.MVC\\Views\\BugView\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-19T06:55:43.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTrcaker.MVC\\Views\\BugView\\Details.cshtml",
+              "RelativeDocumentMoniker": "BugTrcaker.MVC\\Views\\BugView\\Details.cshtml",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTrcaker.MVC\\Views\\BugView\\Details.cshtml",
+              "RelativeToolTip": "BugTrcaker.MVC\\Views\\BugView\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-19T06:55:38.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "BugViewController.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTrcaker.MVC\\Controllers\\BugViewController.cs",
+              "RelativeDocumentMoniker": "BugTrcaker.MVC\\Controllers\\BugViewController.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTrcaker.MVC\\Controllers\\BugViewController.cs",
+              "RelativeToolTip": "BugTrcaker.MVC\\Controllers\\BugViewController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T06:55:28.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "BugViewController.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTracker.API\\Controllers\\BugViewController.cs",
+              "RelativeDocumentMoniker": "BugTracker.API\\Controllers\\BugViewController.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTracker.API\\Controllers\\BugViewController.cs",
+              "RelativeToolTip": "BugTracker.API\\Controllers\\BugViewController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T05:52:34.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTrcaker.MVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "BugTrcaker.MVC\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTrcaker.MVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "BugTrcaker.MVC\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABYAAAAAAAAAAAAswCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-19T05:28:49.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\.Net Training\\Day19\\Solution1\\BugTrcaker.MVC\\Views\\Bugs\\Details.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\.Net Training\\Day19\\Solution1\\BugTrcaker.MVC\\Views\\Bugs\\Details.cshtml",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\.Net Training\\Day19\\Solution1\\BugTrcaker.MVC\\Views\\Bugs\\Details.cshtml",
+              "RelativeToolTip": "..\\..\\..\\..\\.Net Training\\Day19\\Solution1\\BugTrcaker.MVC\\Views\\Bugs\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-19T05:18:22.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTrcaker.MVC\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "BugTrcaker.MVC\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTrcaker.MVC\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "BugTrcaker.MVC\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-19T05:18:18.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\.Net Training\\Day19\\Solution1\\BugTrcaker.MVC\\Views\\Bugs\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\.Net Training\\Day19\\Solution1\\BugTrcaker.MVC\\Views\\Bugs\\Index.cshtml",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\.Net Training\\Day19\\Solution1\\BugTrcaker.MVC\\Views\\Bugs\\Index.cshtml",
+              "RelativeToolTip": "..\\..\\..\\..\\.Net Training\\Day19\\Solution1\\BugTrcaker.MVC\\Views\\Bugs\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-19T05:17:12.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "BugViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTrcaker.MVC\\Models\\BugViewModel.cs",
+              "RelativeDocumentMoniker": "BugTrcaker.MVC\\Models\\BugViewModel.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTrcaker.MVC\\Models\\BugViewModel.cs",
+              "RelativeToolTip": "BugTrcaker.MVC\\Models\\BugViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T05:00:48.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTrcaker.MVC\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "BugTrcaker.MVC\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTrcaker.MVC\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "BugTrcaker.MVC\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T05:00:20.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTrcaker.MVC\\Program.cs",
+              "RelativeDocumentMoniker": "BugTrcaker.MVC\\Program.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTrcaker.MVC\\Program.cs",
+              "RelativeToolTip": "BugTrcaker.MVC\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T04:48:43.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "BugTrcaker.MVC.csproj",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTrcaker.MVC\\BugTrcaker.MVC.csproj",
+              "RelativeDocumentMoniker": "BugTrcaker.MVC\\BugTrcaker.MVC.csproj",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTrcaker.MVC\\BugTrcaker.MVC.csproj",
+              "RelativeToolTip": "BugTrcaker.MVC\\BugTrcaker.MVC.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-19T04:48:38.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BugTracker.API.csproj",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTracker.API\\BugTracker.API.csproj",
+              "RelativeDocumentMoniker": "BugTracker.API\\BugTracker.API.csproj",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTracker.API\\BugTracker.API.csproj",
+              "RelativeToolTip": "BugTracker.API\\BugTracker.API.csproj",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-19T04:43:20.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProjectController.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTracker.API\\Controllers\\ProjectController.cs",
+              "RelativeDocumentMoniker": "BugTracker.API\\Controllers\\ProjectController.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTracker.API\\Controllers\\ProjectController.cs",
+              "RelativeToolTip": "BugTracker.API\\Controllers\\ProjectController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwA8AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T05:26:31.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ProjectRepository.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Infarstructure\\Repositories\\ProjectRepository.cs",
+              "RelativeDocumentMoniker": "Infarstructure\\Repositories\\ProjectRepository.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Infarstructure\\Repositories\\ProjectRepository.cs",
+              "RelativeToolTip": "Infarstructure\\Repositories\\ProjectRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T05:18:48.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ProjectService.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Application\\Services\\ProjectService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\ProjectService.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Application\\Services\\ProjectService.cs",
+              "RelativeToolTip": "Application\\Services\\ProjectService.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowBMAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T05:15:41.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IProjectService.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\Interfaces\\IProjectService.cs",
+              "RelativeDocumentMoniker": "Core\\Interfaces\\IProjectService.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\Interfaces\\IProjectService.cs",
+              "RelativeToolTip": "Core\\Interfaces\\IProjectService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T05:11:04.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ProjectResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\DTOs\\ProjectResponseDTO.cs",
+              "RelativeDocumentMoniker": "Core\\DTOs\\ProjectResponseDTO.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\DTOs\\ProjectResponseDTO.cs",
+              "RelativeToolTip": "Core\\DTOs\\ProjectResponseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T05:08:12.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ProjectRequestDTO.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\DTOs\\ProjectRequestDTO.cs",
+              "RelativeDocumentMoniker": "Core\\DTOs\\ProjectRequestDTO.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\DTOs\\ProjectRequestDTO.cs",
+              "RelativeToolTip": "Core\\DTOs\\ProjectRequestDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T05:07:52.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "BugServiceTest.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTrackerTest\\Services\\BugServiceTest.cs",
+              "RelativeDocumentMoniker": "BugTrackerTest\\Services\\BugServiceTest.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTrackerTest\\Services\\BugServiceTest.cs",
+              "RelativeToolTip": "BugTrackerTest\\Services\\BugServiceTest.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAmwJcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T06:47:59.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTracker.API\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "BugTracker.API\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTracker.API\\WeatherForecast.cs",
+              "RelativeToolTip": "BugTracker.API\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T06:01:34.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BugController.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTracker.API\\Controllers\\BugController.cs",
+              "RelativeDocumentMoniker": "BugTracker.API\\Controllers\\BugController.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTracker.API\\Controllers\\BugController.cs",
+              "RelativeToolTip": "BugTracker.API\\Controllers\\BugController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T05:55:23.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\Interfaces\\IRepository.cs",
+              "RelativeDocumentMoniker": "Core\\Interfaces\\IRepository.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\Interfaces\\IRepository.cs",
+              "RelativeToolTip": "Core\\Interfaces\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T05:14:20.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "BugTrackerContext.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Infarstructure\\Data\\BugTrackerContext.cs",
+              "RelativeDocumentMoniker": "Infarstructure\\Data\\BugTrackerContext.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Infarstructure\\Data\\BugTrackerContext.cs",
+              "RelativeToolTip": "Infarstructure\\Data\\BugTrackerContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T04:49:47.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "BugResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\DTOs\\BugResponseDTO.cs",
+              "RelativeDocumentMoniker": "Core\\DTOs\\BugResponseDTO.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\DTOs\\BugResponseDTO.cs",
+              "RelativeToolTip": "Core\\DTOs\\BugResponseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T04:49:16.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BugRequestDTO.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\DTOs\\BugRequestDTO.cs",
+              "RelativeDocumentMoniker": "Core\\DTOs\\BugRequestDTO.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\DTOs\\BugRequestDTO.cs",
+              "RelativeToolTip": "Core\\DTOs\\BugRequestDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T04:49:04.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "IBugRepository.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\Interfaces\\IBugRepository.cs",
+              "RelativeDocumentMoniker": "Core\\Interfaces\\IBugRepository.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\Interfaces\\IBugRepository.cs",
+              "RelativeToolTip": "Core\\Interfaces\\IBugRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T04:48:33.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "IBugService.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\Interfaces\\IBugService.cs",
+              "RelativeDocumentMoniker": "Core\\Interfaces\\IBugService.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\Interfaces\\IBugService.cs",
+              "RelativeToolTip": "Core\\Interfaces\\IBugService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T04:48:22.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Project.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\Entities\\Project.cs",
+              "RelativeDocumentMoniker": "Core\\Entities\\Project.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\Entities\\Project.cs",
+              "RelativeToolTip": "Core\\Entities\\Project.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T04:45:25.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Bug.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\Entities\\Bug.cs",
+              "RelativeDocumentMoniker": "Core\\Entities\\Bug.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\Entities\\Bug.cs",
+              "RelativeToolTip": "Core\\Entities\\Bug.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T04:45:03.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "BugRepository.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Infarstructure\\Repositories\\BugRepository.cs",
+              "RelativeDocumentMoniker": "Infarstructure\\Repositories\\BugRepository.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Infarstructure\\Repositories\\BugRepository.cs",
+              "RelativeToolTip": "Infarstructure\\Repositories\\BugRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T04:44:09.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "BugDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Infarstructure\\Data\\BugDbContext.cs",
+              "RelativeDocumentMoniker": "Infarstructure\\Data\\BugDbContext.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Infarstructure\\Data\\BugDbContext.cs",
+              "RelativeToolTip": "Infarstructure\\Data\\BugDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T04:43:32.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "BugService.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Application\\Services\\BugService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\BugService.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Application\\Services\\BugService.cs",
+              "RelativeToolTip": "Application\\Services\\BugService.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAqwE0AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T04:42:56.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTracker.API\\Program.cs",
+              "RelativeDocumentMoniker": "BugTracker.API\\Program.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTracker.API\\Program.cs",
+              "RelativeToolTip": "BugTracker.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T04:38:49.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "BugTracker.API.http",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTracker.API\\BugTracker.API.http",
+              "RelativeDocumentMoniker": "BugTracker.API\\BugTracker.API.http",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTracker.API\\BugTracker.API.http",
+              "RelativeToolTip": "BugTracker.API\\BugTracker.API.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-08-07T04:38:39.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTracker.API\\appsettings.json",
+              "RelativeDocumentMoniker": "BugTracker.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\BugTracker.API\\appsettings.json",
+              "RelativeToolTip": "BugTracker.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-07T04:38:36.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Application\\Class1.cs",
+              "RelativeDocumentMoniker": "Application\\Class1.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Application\\Class1.cs",
+              "RelativeToolTip": "Application\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T04:34:43.06Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\Class1.cs",
+              "RelativeDocumentMoniker": "Core\\Class1.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Core\\Class1.cs",
+              "RelativeToolTip": "Core\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T04:34:16.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Infarstructure\\Class1.cs",
+              "RelativeDocumentMoniker": "Infarstructure\\Class1.cs",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Infarstructure\\Class1.cs",
+              "RelativeToolTip": "Infarstructure\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T04:33:54.189Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

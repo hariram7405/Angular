@@ -1,0 +1,68 @@
+<div class="login-container">
+  <div class="login-card">
+    <div class="login-header">
+      <i class="pi pi-user-plus login-icon"></i>
+      <h2>Welcome Back</h2>
+      <p>Sign in to your account</p>
+    </div>
+    
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="login-form">
+      <div class="field">
+        <label for="username">Username</label>
+        <span class="p-input-icon-left">
+          <i class="pi pi-user"></i>
+          <input 
+            pInputText 
+            id="username" 
+            formControlName="username"
+            placeholder="Enter username"
+            class="w-full"
+          />
+        </span>
+        <small class="p-error" *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+          Username is required
+        </small>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <span class="p-input-icon-left">
+          <i class="pi pi-lock"></i>
+          <input 
+            pInputText 
+            id="password" 
+            type="password"
+            formControlName="password"
+            placeholder="Enter password"
+            class="w-full"
+          />
+        </span>
+        <small class="p-error" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+          Password is required
+        </small>
+      </div>
+
+      <div class="field-checkbox">
+        <p-checkbox 
+          formControlName="rememberMe"
+          inputId="remember" 
+          binary="true"
+        ></p-checkbox>
+        <label for="remember">Remember me</label>
+      </div>
+
+      <p-button 
+        label="Sign In" 
+        icon="pi pi-sign-in"
+        [loading]="isLoading"
+        [disabled]="loginForm.invalid"
+        type="submit"
+        styleClass="w-full login-btn"
+      ></p-button>
+    </form>
+    
+    <div class="login-footer">
+      <a href="#" class="forgot-password">Forgot your password?</a>
+    </div>
+  </div>
+</div>

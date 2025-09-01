@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Solution1.slnLaunch.user||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Solution1.slnLaunch.user||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 345,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Solution1.slnLaunch.user",
+              "DocumentMoniker": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Solution1.slnLaunch.user",
+              "RelativeDocumentMoniker": "Solution1.slnLaunch.user",
+              "ToolTip": "C:\\Users\\harirl\\source\\repos\\Angular Training\\Day4\\Project2\\backend\\Solution1.slnLaunch.user",
+              "RelativeToolTip": "Solution1.slnLaunch.user",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
+              "WhenOpened": "2025-09-01T05:49:27.588Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--surface-ground) 0%, var(--surface-50) 100%);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 2.5rem;
+  background: var(--surface-card);
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  border: 1px solid var(--surface-border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-icon {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.login-header h2 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+
+.login-header p {
+  margin: 0;
+  color: var(--text-color-secondary);
+  font-size: 0.95rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.field-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.field-checkbox label {
+  margin: 0;
+  font-weight: 500;
+  color: var(--text-color-secondary);
+  cursor: pointer;
+}
+
+.p-input-icon-left > i {
+  color: var(--text-color-secondary);
+}
+
+.p-inputtext {
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--surface-border);
+  transition: all 0.2s ease;
+  background: var(--surface-card);
+  color: var(--text-color);
+}
+
+.p-inputtext::placeholder {
+  color: var(--text-color-secondary);
+  opacity: 0.8;
+}
+
+.p-inputtext:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem var(--primary-50, rgba(59, 130, 246, 0.15));
+}
+
+.p-password .p-inputtext {
+  padding-left: 2.5rem;
+}
+
+.p-password input::placeholder {
+  color: #6b7280 !important;
+  opacity: 1 !important;
+}
+
+.p-password .p-inputtext {
+  color: var(--text-color) !important;
+}
+
+.p-password input {
+  color: var(--text-color) !important;
+}
+
+.p-password input::-webkit-input-placeholder {
+  color: #6b7280 !important;
+  opacity: 1 !important;
+}
+
+.p-password input::-moz-placeholder {
+  color: #6b7280 !important;
+  opacity: 1 !important;
+}
+
+/* Global placeholder styling */
+input::placeholder,
+textarea::placeholder {
+  color: #6b7280 !important;
+  opacity: 1 !important;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #6b7280 !important;
+  opacity: 1 !important;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #6b7280 !important;
+  opacity: 1 !important;
+}
+
+/* Specific for PrimeNG password component */
+.p-password input[type="password"]::placeholder {
+  color: #6b7280 !important;
+  opacity: 1 !important;
+}
+
+.p-password input[type="password"]::-webkit-input-placeholder {
+  color: #6b7280 !important;
+  opacity: 1 !important;
+}
+
+.p-password input[type="password"]::-moz-placeholder {
+  color: #6b7280 !important;
+  opacity: 1 !important;
+}
+
+.login-btn {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--surface-border);
+}
+
+.forgot-password {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.forgot-password:hover {
+  color: var(--primary-600, #1976d2);
+  text-decoration: underline;
+}
+
+.p-error {
+  color: var(--red-500, #ef4444);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 0.5rem;
+  }
+  
+  .login-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .login-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .login-icon {
+    font-size: 2.5rem;
+  }
+}
