@@ -1,108 +1,138 @@
-name: Deploy Angular Projects to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-      
+    - uses: actions/checkout@v4
+    
     - name: Setup Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '18'
-        
-    - name: Build Day1 Phase1
+        cache: 'npm'
+        cache-dependency-path: '**/package-lock.json'
+    
+    - name: Install Angular CLI
+      run: npm install -g @angular/cli
+    
+    - name: Build projects
       run: |
-        cd Day1/Phase1
-        npm ci
-        ng build --base-href="/Angular/day1-phase1/"
+        # Build Day1 Phase1
+        if [ -d "Day1/Phase1" ]; then
+          cd Day1/Phase1
+          npm ci --legacy-peer-deps
+          ng build --base-href="/Angular/day1-phase1/" --output-path=../../dist/day1-phase1
+          cd ../..
+        fi
         
-    - name: Build Day1 Project2
-      run: |
-        cd Day1/Project2
-        npm ci
-        ng build --base-href="/Angular/day1-project2/"
+        # Build Day1 Project2
+        if [ -d "Day1/Project2" ]; then
+          cd Day1/Project2
+          npm ci --legacy-peer-deps
+          ng build --base-href="/Angular/day1-project2/" --output-path=../../dist/day1-project2
+          cd ../..
+        fi
         
-    - name: Build Day2 Phase1
-      run: |
-        cd Day2/Phase1
-        npm ci
-        ng build --base-href="/Angular/day2-phase1/"
+        # Build Day2 Phase1
+        if [ -d "Day2/Phase1" ]; then
+          cd Day2/Phase1
+          npm ci --legacy-peer-deps
+          ng build --base-href="/Angular/day2-phase1/" --output-path=../../dist/day2-phase1
+          cd ../..
+        fi
         
-    - name: Build Day2 Project2
+        # Build Day2 Project2
+        if [ -d "Day2/Project2" ]; then
+          cd Day2/Project2
+          npm ci --legacy-peer-deps
+          ng build --base-href="/Angular/day2-project2/" --output-path=../../dist/day2-project2
+          cd ../..
+        fi
+    
+    - name: Create main index
       run: |
-        cd Day2/Project2
-        npm ci
-        ng build --base-href="/Angular/day2-project2/"
-        
-    - name: Create deployment directory
-      run: |
-        mkdir -p deploy
-        cp -r Day1/Phase1/dist/*/. deploy/day1-phase1/ 2>/dev/null || mkdir -p deploy/day1-phase1
-        cp -r Day1/Project2/dist/*/. deploy/day1-project2/ 2>/dev/null || mkdir -p deploy/day1-project2
-        cp -r Day2/Phase1/dist/*/. deploy/day2-phase1/ 2>/dev/null || mkdir -p deploy/day2-phase1
-        cp -r Day2/Project2/dist/*/. deploy/day2-project2/ 2>/dev/null || mkdir -p deploy/day2-project2
-        
-    - name: Create index.html
-      run: |
-        cat > deploy/index.html << 'EOF'
+        mkdir -p dist
+        cat > dist/index.html << 'EOF'
         <!DOCTYPE html>
         <html>
         <head>
             <title>Angular Training Projects</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
             <style>
-                body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
-                .container { max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-                h1 { color: #333; text-align: center; margin-bottom: 40px; }
-                .project { margin: 20px 0; padding: 20px; border: 1px solid #ddd; border-radius: 8px; transition: transform 0.2s; }
-                .project:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-                .project h3 { color: #007bff; margin: 0 0 10px 0; }
-                .project a { color: #007bff; text-decoration: none; font-weight: 500; }
-                .project a:hover { text-decoration: underline; }
-                .day-section { margin: 30px 0; }
-                .day-title { color: #333; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
+                * { margin: 0; padding: 0; box-sizing: border-box; }
+                body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+                .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+                h1 { color: white; text-align: center; font-size: 3rem; margin-bottom: 50px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+                .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+                .project { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease; }
+                .project:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+                .project h3 { color: #333; font-size: 1.5rem; margin-bottom: 15px; }
+                .project a { display: inline-block; background: linear-gradient(45deg, #667eea, #764ba2); color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }
+                .project a:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+                .day-title { color: white; font-size: 2rem; text-align: center; margin: 40px 0 30px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+                @media (max-width: 768px) { h1 { font-size: 2rem; } .projects { grid-template-columns: 1fr; } }
             </style>
         </head>
         <body>
             <div class="container">
-                <h1>🚀 Angular Training Projects</h1>
+                <h1>🚀 Angular Training</h1>
                 
-                <div class="day-section">
-                    <h2 class="day-title">Day 1 Projects</h2>
+                <h2 class="day-title">Day 1 Projects</h2>
+                <div class="projects">
                     <div class="project">
-                        <h3>Phase 1</h3>
-                        <a href="./day1-phase1/">View Project →</a>
+                        <h3>📱 Phase 1</h3>
+                        <p>Angular fundamentals and components</p>
+                        <a href="./day1-phase1/">Launch Project →</a>
                     </div>
                     <div class="project">
-                        <h3>Project 2</h3>
-                        <a href="./day1-project2/">View Project →</a>
+                        <h3>🎯 Project 2</h3>
+                        <p>Advanced Angular features</p>
+                        <a href="./day1-project2/">Launch Project →</a>
                     </div>
                 </div>
                 
-                <div class="day-section">
-                    <h2 class="day-title">Day 2 Projects</h2>
+                <h2 class="day-title">Day 2 Projects</h2>
+                <div class="projects">
                     <div class="project">
-                        <h3>Phase 1</h3>
-                        <a href="./day2-phase1/">View Project →</a>
+                        <h3>⚡ Phase 1</h3>
+                        <p>Services and HTTP client</p>
+                        <a href="./day2-phase1/">Launch Project →</a>
                     </div>
                     <div class="project">
-                        <h3>Project 2</h3>
-                        <a href="./day2-project2/">View Project →</a>
+                        <h3>🌟 Project 2</h3>
+                        <p>Routing and navigation</p>
+                        <a href="./day2-project2/">Launch Project →</a>
                     </div>
                 </div>
             </div>
         </body>
         </html>
         EOF
-        
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
+    
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./deploy
+        path: ./dist
+  
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
