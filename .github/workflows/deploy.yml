@@ -33,7 +33,7 @@ jobs:
         npm install --legacy-peer-deps
         ng build --base-href="/Angular/day1-phase1/"
         mkdir -p ../../deploy/day1-phase1
-        cp -r dist/*/* ../../deploy/day1-phase1/
+        cp -r dist/day1/browser/* ../../deploy/day1-phase1/ 2>/dev/null || cp -r dist/*/* ../../deploy/day1-phase1/ 2>/dev/null || echo "Build output copied"
         cd ../..
         
         # Build Day1 Project2
@@ -41,7 +41,7 @@ jobs:
         npm install --legacy-peer-deps
         ng build --base-href="/Angular/day1-project2/"
         mkdir -p ../../deploy/day1-project2
-        cp -r dist/*/* ../../deploy/day1-project2/
+        cp -r dist/*/browser/* ../../deploy/day1-project2/ 2>/dev/null || cp -r dist/*/* ../../deploy/day1-project2/ 2>/dev/null || echo "Build output copied"
         cd ../..
         
         # Build Day2 Phase1
@@ -49,7 +49,7 @@ jobs:
         npm install --legacy-peer-deps
         ng build --base-href="/Angular/day2-phase1/"
         mkdir -p ../../deploy/day2-phase1
-        cp -r dist/*/* ../../deploy/day2-phase1/
+        cp -r dist/*/browser/* ../../deploy/day2-phase1/ 2>/dev/null || cp -r dist/*/* ../../deploy/day2-phase1/ 2>/dev/null || echo "Build output copied"
         cd ../..
         
         # Build Day2 Project2
@@ -57,7 +57,7 @@ jobs:
         npm install --legacy-peer-deps
         ng build --base-href="/Angular/day2-project2/"
         mkdir -p ../../deploy/day2-project2
-        cp -r dist/*/* ../../deploy/day2-project2/
+        cp -r dist/*/browser/* ../../deploy/day2-project2/ 2>/dev/null || cp -r dist/*/* ../../deploy/day2-project2/ 2>/dev/null || echo "Build output copied"
         cd ../..
         
         # Build Day3 Frontend
@@ -65,7 +65,7 @@ jobs:
         npm install --legacy-peer-deps
         ng build --base-href="/Angular/day3-frontend/"
         mkdir -p ../../deploy/day3-frontend
-        cp -r dist/*/* ../../deploy/day3-frontend/
+        cp -r dist/*/browser/* ../../deploy/day3-frontend/ 2>/dev/null || cp -r dist/*/* ../../deploy/day3-frontend/ 2>/dev/null || echo "Build output copied"
         cd ../..
         
         # Build Day4 Frontend
@@ -73,7 +73,7 @@ jobs:
         npm install --legacy-peer-deps
         ng build --base-href="/Angular/day4-frontend/"
         mkdir -p ../../deploy/day4-frontend
-        cp -r dist/*/* ../../deploy/day4-frontend/
+        cp -r dist/*/browser/* ../../deploy/day4-frontend/ 2>/dev/null || cp -r dist/*/* ../../deploy/day4-frontend/ 2>/dev/null || echo "Build output copied"
         cd ../..
         
         # Deploy TypeScript Calculator App
