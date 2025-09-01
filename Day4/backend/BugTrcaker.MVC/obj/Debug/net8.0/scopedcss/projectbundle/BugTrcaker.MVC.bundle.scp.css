@@ -1,0 +1,49 @@
+/* _content/BugTrcaker.MVC/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-jomjn5u746] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-jomjn5u746] {
+  color: #0077cc;
+}
+
+.btn-primary[b-jomjn5u746] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-jomjn5u746], .nav-pills .show > .nav-link[b-jomjn5u746] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-jomjn5u746] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-jomjn5u746] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-jomjn5u746] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-jomjn5u746] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-jomjn5u746] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
