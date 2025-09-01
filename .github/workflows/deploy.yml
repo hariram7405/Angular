@@ -1,0 +1,108 @@
+name: Deploy Angular Projects to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Build Day1 Phase1
+      run: |
+        cd Day1/Phase1
+        npm ci
+        ng build --base-href="/Angular/day1-phase1/"
+        
+    - name: Build Day1 Project2
+      run: |
+        cd Day1/Project2
+        npm ci
+        ng build --base-href="/Angular/day1-project2/"
+        
+    - name: Build Day2 Phase1
+      run: |
+        cd Day2/Phase1
+        npm ci
+        ng build --base-href="/Angular/day2-phase1/"
+        
+    - name: Build Day2 Project2
+      run: |
+        cd Day2/Project2
+        npm ci
+        ng build --base-href="/Angular/day2-project2/"
+        
+    - name: Create deployment directory
+      run: |
+        mkdir -p deploy
+        cp -r Day1/Phase1/dist/*/. deploy/day1-phase1/ 2>/dev/null || mkdir -p deploy/day1-phase1
+        cp -r Day1/Project2/dist/*/. deploy/day1-project2/ 2>/dev/null || mkdir -p deploy/day1-project2
+        cp -r Day2/Phase1/dist/*/. deploy/day2-phase1/ 2>/dev/null || mkdir -p deploy/day2-phase1
+        cp -r Day2/Project2/dist/*/. deploy/day2-project2/ 2>/dev/null || mkdir -p deploy/day2-project2
+        
+    - name: Create index.html
+      run: |
+        cat > deploy/index.html << 'EOF'
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Angular Training Projects</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
+                .container { max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+                h1 { color: #333; text-align: center; margin-bottom: 40px; }
+                .project { margin: 20px 0; padding: 20px; border: 1px solid #ddd; border-radius: 8px; transition: transform 0.2s; }
+                .project:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+                .project h3 { color: #007bff; margin: 0 0 10px 0; }
+                .project a { color: #007bff; text-decoration: none; font-weight: 500; }
+                .project a:hover { text-decoration: underline; }
+                .day-section { margin: 30px 0; }
+                .day-title { color: #333; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>🚀 Angular Training Projects</h1>
+                
+                <div class="day-section">
+                    <h2 class="day-title">Day 1 Projects</h2>
+                    <div class="project">
+                        <h3>Phase 1</h3>
+                        <a href="./day1-phase1/">View Project →</a>
+                    </div>
+                    <div class="project">
+                        <h3>Project 2</h3>
+                        <a href="./day1-project2/">View Project →</a>
+                    </div>
+                </div>
+                
+                <div class="day-section">
+                    <h2 class="day-title">Day 2 Projects</h2>
+                    <div class="project">
+                        <h3>Phase 1</h3>
+                        <a href="./day2-phase1/">View Project →</a>
+                    </div>
+                    <div class="project">
+                        <h3>Project 2</h3>
+                        <a href="./day2-project2/">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </body>
+        </html>
+        EOF
+        
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./deploy
