@@ -1,0 +1,59 @@
+@BugTracker.API_HostAddress = http://localhost:5270
+
+### Test Weather Forecast
+GET {{BugTracker.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+### Register User
+POST {{BugTracker.API_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "password123",
+  "role": "Developer"
+}
+
+### Login User
+POST {{BugTracker.API_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "userName": "testuser",
+  "password": "password123"
+}
+
+### Get All Users (Debug)
+GET {{BugTracker.API_HostAddress}}/api/auth/users
+Accept: application/json
+
+### Register Admin User
+POST {{BugTracker.API_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin123",
+  "role": "Admin"
+}
+
+### Test Invalid Registration (existing user)
+POST {{BugTracker.API_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "password123",
+  "role": "Developer"
+}
+
+### Test Invalid Login
+POST {{BugTracker.API_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "userName": "testuser",
+  "password": "wrongpassword"
+}
+
+###
