@@ -1,0 +1,79 @@
+<div class="bugs-page">
+  <div class="dashboard-header">
+    <h2>Bug Tracker</h2>
+    <p-button label="Report New Bug" [raised]="true" class="p-button-primary"></p-button>
+  </div>
+  
+  <p-card>
+    <p-table #dt
+      [value]="bugs" 
+      [paginator]="true" 
+      [rows]="10" 
+      [rowsPerPageOptions]="[5, 10, 20]" 
+      [loading]="loading"
+      [globalFilterFields]="['title', 'description', 'status', 'priority']"
+      [sortField]="'createdOn'"
+      [sortOrder]="-1"
+      styleClass="p-datatable-striped">
+      
+      <ng-template pTemplate="caption">
+        <div class="table-header">
+          <div class="filter-row">
+            <div class="filter-item">
+              <span class="p-input-icon-left">
+                <i class="pi pi-search"></i>
+                <input pInputText type="text" #searchInput (input)="dt.filterGlobal(searchInput.value, 'contains')" placeholder="Search bugs..." />
+              </span>
+            </div>
+            <div class="filter-item">
+              <input pInputText type="text" (input)="dt.filter($any($event.target).value, 'title', 'contains')" placeholder="Filter by title" />
+            </div>
+            <div class="filter-item">
+              <p-dropdown [options]="statusOptions" optionLabel="label" optionValue="value" [(ngModel)]="selectedStatus" (onChange)="dt.filter($event.value, 'status', 'equals')" placeholder="All Status" [showClear]="true"></p-dropdown>
+            </div>
+            <div class="filter-item">
+              <p-dropdown [options]="priorityOptions" optionLabel="label" optionValue="value" [(ngModel)]="selectedPriority" (onChange)="dt.filter($event.value, 'priority', 'equals')" placeholder="All Priority" [showClear]="true"></p-dropdown>
+            </div>
+            <div class="filter-item">
+              <p-button label="Reset" icon="pi pi-refresh" (onClick)="resetFilters()" class="p-button-outlined p-button-sm"></p-button>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+      
+      <ng-template pTemplate="header">
+        <tr>
+          <th pSortableColumn="id">ID <p-sortIcon field="id"></p-sortIcon></th>
+          <th pSortableColumn="title">Title <p-sortIcon field="title"></p-sortIcon></th>
+          <th pSortableColumn="status">Status <p-sortIcon field="status"></p-sortIcon></th>
+          <th pSortableColumn="priority">Priority <p-sortIcon field="priority"></p-sortIcon></th>
+          <th pSortableColumn="createdOn">Created <p-sortIcon field="createdOn"></p-sortIcon></th>
+          <th pSortableColumn="projectId">Project <p-sortIcon field="projectId"></p-sortIcon></th>
+        </tr>
+
+      </ng-template>
+      
+      <ng-template pTemplate="body" let-bug>
+        <tr>
+          <td>#{{bug.id}}</td>
+          <td>
+            <div class="bug-title-cell">
+              <strong>{{bug.title}}</strong>
+              <div class="bug-description">{{bug.description}}</div>
+            </div>
+          </td>
+          <td><p-tag [value]="bug.status" [severity]="getSeverity(bug.status)"></p-tag></td>
+          <td><p-tag [value]="bug.priority" [severity]="getPrioritySeverity(bug.priority)"></p-tag></td>
+          <td>{{bug.createdOn | date:'short'}}</td>
+          <td>{{getProjectName(bug.projectId)}}</td>
+        </tr>
+      </ng-template>
+      
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="6" class="text-center">No bugs found.</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
+</div>

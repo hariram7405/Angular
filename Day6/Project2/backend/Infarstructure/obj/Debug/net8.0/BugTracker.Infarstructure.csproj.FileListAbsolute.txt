@@ -1,0 +1,16 @@
+C:\Users\harirl\source\repos\.Net Training\Day14\Solution1\Infarstructure\bin\Debug\net8.0\BugTracker.Infarstructure.deps.json
+C:\Users\harirl\source\repos\.Net Training\Day14\Solution1\Infarstructure\bin\Debug\net8.0\BugTracker.Infarstructure.dll
+C:\Users\harirl\source\repos\.Net Training\Day14\Solution1\Infarstructure\bin\Debug\net8.0\BugTracker.Infarstructure.pdb
+C:\Users\harirl\source\repos\.Net Training\Day14\Solution1\Infarstructure\bin\Debug\net8.0\BugTracker.Core.dll
+C:\Users\harirl\source\repos\.Net Training\Day14\Solution1\Infarstructure\bin\Debug\net8.0\BugTracker.Core.pdb
+C:\Users\harirl\source\repos\.Net Training\Day14\Solution1\Infarstructure\obj\Debug\net8.0\BugTracker.Infarstructure.csproj.AssemblyReference.cache
+C:\Users\harirl\source\repos\.Net Training\Day14\Solution1\Infarstructure\obj\Debug\net8.0\BugTracker.Infarstructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\harirl\source\repos\.Net Training\Day14\Solution1\Infarstructure\obj\Debug\net8.0\BugTracker.Infarstructure.AssemblyInfoInputs.cache
+C:\Users\harirl\source\repos\.Net Training\Day14\Solution1\Infarstructure\obj\Debug\net8.0\BugTracker.Infarstructure.AssemblyInfo.cs
+C:\Users\harirl\source\repos\.Net Training\Day14\Solution1\Infarstructure\obj\Debug\net8.0\BugTracker.Infarstructure.csproj.CoreCompileInputs.cache
+C:\Users\harirl\source\repos\.Net Training\Day14\Solution1\Infarstructure\obj\Debug\net8.0\BugTracker.Infarstructure.sourcelink.json
+C:\Users\harirl\source\repos\.Net Training\Day14\Solution1\Infarstructure\obj\Debug\net8.0\BugTrack.CD3F8266.Up2Date
+C:\Users\harirl\source\repos\.Net Training\Day14\Solution1\Infarstructure\obj\Debug\net8.0\BugTracker.Infarstructure.dll
+C:\Users\harirl\source\repos\.Net Training\Day14\Solution1\Infarstructure\obj\Debug\net8.0\refint\BugTracker.Infarstructure.dll
+C:\Users\harirl\source\repos\.Net Training\Day14\Solution1\Infarstructure\obj\Debug\net8.0\BugTracker.Infarstructure.pdb
+C:\Users\harirl\source\repos\.Net Training\Day14\Solution1\Infarstructure\obj\Debug\net8.0\ref\BugTracker.Infarstructure.dll
