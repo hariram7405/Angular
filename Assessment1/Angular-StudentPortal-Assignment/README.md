@@ -133,10 +133,20 @@ src/
 ## Screenshots
 
 1. **Registration Page** - Student registration form with validation
+<img width="929" height="900" alt="image" src="https://github.com/user-attachments/assets/a8c295a9-9ac9-47e7-88a6-26b0350fad8c" />
+
 2. **Student List** - DataTable showing all registered students
+   <img width="1902" height="565" alt="image" src="https://github.com/user-attachments/assets/0f672731-25b4-4d21-b35f-bff1e86b2875" />
+ 
 3. **Edit Dialog** - Modal dialog for editing student details
+   <img width="669" height="699" alt="image" src="https://github.com/user-attachments/assets/0baebe15-96cc-4038-9511-ae8af8ad91b7" />
+
 4. **Navigation Menu** - PrimeNG menubar for page navigation
+ <img width="1818" height="1006" alt="image" src="https://github.com/user-attachments/assets/14f0dee2-51df-4a65-8b1a-669b104a6211" />
+
 5. **Mobile View** - Responsive design on mobile devices
+   <img width="832" height="956" alt="image" src="https://github.com/user-attachments/assets/1a4495aa-a012-416f-a8b5-5b6e8e62efc1" />
+
 
 ## Future Enhancements
 
