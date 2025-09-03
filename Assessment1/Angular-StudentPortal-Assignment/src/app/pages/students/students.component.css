@@ -1,0 +1,62 @@
+.students-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.students-container h2 {
+  margin-bottom: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field label {
+  font-weight: 600;
+  color: #333;
+}
+
+.field input,
+.field p-dropdown {
+  width: 100%;
+}
+
+.ng-invalid.ng-touched {
+  border-color: #e24c4c;
+}
+
+@media (max-width: 768px) {
+  .students-container {
+    margin: 0;
+  }
+  
+  .students-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Make table responsive */
+  :host ::ng-deep .p-datatable-wrapper {
+    overflow-x: auto;
+  }
+  
+  :host ::ng-deep .p-datatable table {
+    min-width: 600px;
+  }
+}

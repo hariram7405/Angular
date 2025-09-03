@@ -1,0 +1,87 @@
+<div class="register-container">
+  <p-card header="Student Registration" class="registration-card">
+    <form [formGroup]="studentForm" (ngSubmit)="onSubmit()" class="registration-form">
+      
+      <div class="field">
+        <label for="name">Name *</label>
+        <input 
+          pInputText 
+          id="name" 
+          formControlName="name" 
+          placeholder="Enter student name"
+          [class.ng-invalid]="studentForm.get('name')?.invalid && studentForm.get('name')?.touched"
+        />
+        <p-message 
+          *ngIf="getFieldError('name')" 
+          severity="error" 
+          [text]="getFieldError('name')"
+        ></p-message>
+      </div>
+
+      <div class="field">
+        <label for="email">Email *</label>
+        <input 
+          pInputText 
+          id="email" 
+          formControlName="email" 
+          placeholder="Enter email address"
+          [class.ng-invalid]="studentForm.get('email')?.invalid && studentForm.get('email')?.touched"
+        />
+        <p-message 
+          *ngIf="getFieldError('email')" 
+          severity="error" 
+          [text]="getFieldError('email')"
+        ></p-message>
+      </div>
+
+      <div class="field">
+        <label for="age">Age *</label>
+        <input 
+          pInputText 
+          id="age" 
+          type="number" 
+          formControlName="age" 
+          placeholder="Enter age (16-45)"
+          [class.ng-invalid]="studentForm.get('age')?.invalid && studentForm.get('age')?.touched"
+        />
+        <p-message 
+          *ngIf="getFieldError('age')" 
+          severity="error" 
+          [text]="getFieldError('age')"
+        ></p-message>
+      </div>
+
+      <div class="field">
+        <label for="department">Department *</label>
+        <p-dropdown 
+          id="department"
+          [options]="departments" 
+          formControlName="department" 
+          placeholder="Select Department"
+          [showClear]="true"
+          [class.ng-invalid]="studentForm.get('department')?.invalid && studentForm.get('department')?.touched"
+        ></p-dropdown>
+        <p-message 
+          *ngIf="getFieldError('department')" 
+          severity="error" 
+          [text]="getFieldError('department')"
+        ></p-message>
+      </div>
+
+      <div class="form-actions">
+        <p-button 
+          type="submit" 
+          label="Register Student" 
+          icon="pi pi-check"
+          [disabled]="studentForm.invalid"
+        ></p-button>
+      </div>
+      
+      <p-message 
+        *ngIf="showSuccessMessage" 
+        severity="success" 
+        text="Student registered successfully!"
+      ></p-message>
+    </form>
+  </p-card>
+</div>

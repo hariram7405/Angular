@@ -1,0 +1,133 @@
+<div class="students-container">
+  <h2>Student List</h2>
+  
+  <p-table 
+    [value]="students" 
+    [paginator]="true" 
+    [rows]="10"
+    [responsive]="true"
+    styleClass="p-datatable-striped"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Department</th>
+        <th>Actions</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-student>
+      <tr>
+        <td>{{ student.name }}</td>
+        <td>{{ student.email }}</td>
+        <td>{{ student.age }}</td>
+        <td>{{ student.department }}</td>
+        <td>
+          <p-button 
+            icon="pi pi-pencil" 
+            label="Edit" 
+            (onClick)="onRowSelect(student)"
+            size="small"
+          ></p-button>
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="5" class="text-center">No students registered yet.</td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <p-dialog 
+    header="Edit Student" 
+    [(visible)]="displayDialog" 
+    [modal]="true" 
+    [responsive]="true"
+    [style]="{width: '450px'}"
+    (onHide)="hideDialog()"
+  >
+    <form [formGroup]="editForm" (ngSubmit)="saveStudent()" class="edit-form">
+      
+      <div class="field">
+        <label for="editName">Name *</label>
+        <input 
+          pInputText 
+          id="editName" 
+          formControlName="name" 
+          [class.ng-invalid]="editForm.get('name')?.invalid && editForm.get('name')?.touched"
+        />
+        <p-message 
+          *ngIf="getFieldError('name')" 
+          severity="error" 
+          [text]="getFieldError('name')"
+        ></p-message>
+      </div>
+
+      <div class="field">
+        <label for="editEmail">Email *</label>
+        <input 
+          pInputText 
+          id="editEmail" 
+          formControlName="email" 
+          [class.ng-invalid]="editForm.get('email')?.invalid && editForm.get('email')?.touched"
+        />
+        <p-message 
+          *ngIf="getFieldError('email')" 
+          severity="error" 
+          [text]="getFieldError('email')"
+        ></p-message>
+      </div>
+
+      <div class="field">
+        <label for="editAge">Age *</label>
+        <input 
+          pInputText 
+          id="editAge" 
+          type="number" 
+          formControlName="age" 
+          [class.ng-invalid]="editForm.get('age')?.invalid && editForm.get('age')?.touched"
+        />
+        <p-message 
+          *ngIf="getFieldError('age')" 
+          severity="error" 
+          [text]="getFieldError('age')"
+        ></p-message>
+      </div>
+
+      <div class="field">
+        <label for="editDepartment">Department *</label>
+        <p-dropdown 
+          id="editDepartment"
+          [options]="departments" 
+          formControlName="department" 
+          placeholder="Select Department"
+          [showClear]="true"
+          [class.ng-invalid]="editForm.get('department')?.invalid && editForm.get('department')?.touched"
+        ></p-dropdown>
+        <p-message 
+          *ngIf="getFieldError('department')" 
+          severity="error" 
+          [text]="getFieldError('department')"
+        ></p-message>
+      </div>
+
+    </form>
+    
+    <ng-template pTemplate="footer">
+      <p-button 
+        label="Cancel" 
+        icon="pi pi-times" 
+        (onClick)="hideDialog()"
+        severity="secondary"
+      ></p-button>
+      <p-button 
+        label="Save" 
+        icon="pi pi-check" 
+        (onClick)="saveStudent()"
+        [disabled]="editForm.invalid"
+      ></p-button>
+    </ng-template>
+  </p-dialog>
+</div>
