@@ -1,0 +1,69 @@
+<div class="new-bug-page">
+  <div class="dashboard-header">
+    <h2>{{isEditMode ? 'Edit Bug' : 'Report New Bug'}}</h2>
+  </div>
+  
+  <p-card>
+    <form (ngSubmit)="onSubmit()" #bugForm="ngForm">
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="title">Title *</label>
+          <input pInputText id="title" [(ngModel)]="bug.title" name="title" required />
+        </div>
+        
+        <div class="form-field">
+          <label for="project">Project *</label>
+          <p-dropdown 
+            id="project" 
+            [options]="projects" 
+            optionLabel="name" 
+            optionValue="id" 
+            [(ngModel)]="bug.projectId" 
+            name="projectId" 
+            placeholder="Select Project" 
+            required>
+          </p-dropdown>
+        </div>
+        
+        <div class="form-field">
+          <label for="priority">Priority</label>
+          <p-dropdown 
+            id="priority" 
+            [options]="priorityOptions" 
+            optionLabel="label" 
+            optionValue="value" 
+            [(ngModel)]="bug.priority" 
+            name="priority"
+            placeholder="Select Priority">
+          </p-dropdown>
+        </div>
+        
+
+        
+        <div class="form-field" *ngIf="isAdmin()">
+          <label for="assignedTo">Assign To</label>
+          <p-dropdown 
+            id="assignedTo" 
+            [options]="users" 
+            optionLabel="username" 
+            optionValue="id" 
+            [(ngModel)]="bug.assignedToUserId" 
+            name="assignedToUserId"
+            placeholder="Select User"
+            [showClear]="true">
+          </p-dropdown>
+        </div>
+        
+        <div class="form-field">
+          <label for="description">Description *</label>
+          <textarea pInputTextarea id="description" [(ngModel)]="bug.description" name="description" rows="4" required></textarea>
+        </div>
+      </div>
+      
+      <div class="form-actions">
+        <p-button label="Cancel" [outlined]="true" (onClick)="onCancel()"></p-button>
+        <p-button [label]="isEditMode ? 'Update Bug' : 'Report Bug'" type="submit" [loading]="loading" [disabled]="!bugForm.valid"></p-button>
+      </div>
+    </form>
+  </p-card>
+</div>
