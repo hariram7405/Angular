@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BugTrcaker.MVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17c5ab71b54f60bfe7be53bdf172fc5ca68024d9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f05b3954626ec6678cd50b40807e486f6a8a5964")]
 [assembly: System.Reflection.AssemblyProductAttribute("BugTrcaker.MVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BugTrcaker.MVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
