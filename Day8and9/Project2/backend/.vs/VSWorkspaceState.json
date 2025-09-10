@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BugTracker.API",
+    "\\BugTracker.API\\Controllers",
+    "\\BugTrcaker.MVC",
+    "\\BugTrcaker.MVC\\Views",
+    "\\BugTrcaker.MVC\\Views\\Shared",
+    "\\Core",
+    "\\Core\\DTOs",
+    "\\Core\\Entities",
+    "\\Infarstructure",
+    "\\Infarstructure\\Repositories"
+  ],
+  "SelectedNode": "\\Infarstructure\\Repositories\\UserRepository.cs",
+  "PreviewInSolutionExplorer": false
+}

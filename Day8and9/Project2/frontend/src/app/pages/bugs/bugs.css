@@ -1,0 +1,52 @@
+.clickable-title {
+  cursor: pointer;
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.clickable-title:hover {
+  color: var(--primary-color-text);
+}
+
+.filter-row {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: end;
+  flex-wrap: wrap;
+  padding: 15px;
+  background: var(--surface-ground);
+  border-radius: 8px;
+  border: 1px solid var(--surface-border);
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 180px;
+}
+
+.reset-item {
+  margin-left: auto;
+  min-width: auto;
+}
+
+.reset-btn {
+  height: 40px;
+  padding: 0 20px;
+}
+
+.table-header {
+  margin-bottom: 20px;
+}
+
+.bug-title-cell {
+  max-width: 300px;
+}
+
+.bug-description {
+  font-size: 0.9rem;
+  color: var(--text-color-secondary);
+  margin-top: 5px;
+}

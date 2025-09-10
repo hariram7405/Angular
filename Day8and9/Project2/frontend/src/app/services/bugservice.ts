@@ -1,0 +1,144 @@
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Observable, throwError } from "rxjs";
+import { catchError } from "rxjs/operators";
+
+export interface Comment {
+  id: number;
+  author: string;
+  message: string;
+  createdAt: Date;
+}
+
+/** Represents a bug with associated comments */
+export interface BugComment {
+  comments?: Comment[];
+}
+
+
+export interface Bug {
+  id: number;
+  title: string;
+  description: string;
+  status: string;
+  priority: string;
+  createdOn: Date;
+  projectId: number;
+  assignedToUserId?: number;
+  assignedToUserName?: string;
+}
+
+export interface BugFilter {
+  status?: string;
+  priority?: string;
+  page?: number;
+  pageSize?: number;
+  sortField?: string;
+  sortOrder?: number;
+}
+
+export interface Project {
+  id: number;
+  name: string;
+  description: string;
+}
+
+export interface User {
+  id: number;
+  username: string;
+  role: string;
+}
+export interface BugStats {
+  openVsResolved: { open: number; resolved: number };
+  bugsByProject: { [key: string]: number };
+  bugsByStatus: { [key: string]: number };
+  bugsByPriority: { [key: string]: number };
+  bugsByAssigned: { [key: string]: number };
+  totalBugs: number;
+  pendingBugs: number;
+}
+
+
+@Injectable({ providedIn: "root" })
+export class BugService {
+  private apiURL = "https://localhost:7028/api/Bug";
+
+  constructor(private http: HttpClient) {}
+
+  getBugs(): Observable<Bug[]> {
+    const token = localStorage.getItem('jwt_token');
+    const options = token ? { headers: { 'Authorization': `Bearer ${token}` } } : {};
+    
+    return this.http.get<Bug[]>(this.apiURL, options).pipe(
+      catchError((err) => {
+        console.error("Error fetching bugs", err);
+        return throwError(() => err);
+      })
+    );
+  }
+
+  getProjects(): Observable<Project[]> {
+    const token = localStorage.getItem('jwt_token');
+    const options = token ? { headers: { 'Authorization': `Bearer ${token}` } } : {};
+    return this.http.get<Project[]>('https://localhost:7028/api/Project', options);
+  }
+
+  createBug(bug: Omit<Bug, 'id' | 'createdOn'>): Observable<Bug> {
+    const token = localStorage.getItem('jwt_token');
+    const options = token ? { headers: { 'Authorization': `Bearer ${token}` } } : {};
+    return this.http.post<Bug>(this.apiURL, bug, options);
+  }
+
+  updateBug(id: number, bug: Omit<Bug, 'id' | 'createdOn'>): Observable<any> {
+    const token = localStorage.getItem('jwt_token');
+    const options = token ? { headers: { 'Authorization': `Bearer ${token}` } } : {};
+    return this.http.put(`${this.apiURL}/${id}`, bug, options);
+  }
+
+  getBugById(id: number): Observable<Bug> {
+    const token = localStorage.getItem('jwt_token');
+    const options = token ? { headers: { 'Authorization': `Bearer ${token}` } } : {};
+    return this.http.get<Bug>(`${this.apiURL}/${id}`, options);
+  }
+  deleteBug(id: number): Observable<any> {
+    const token = localStorage.getItem('jwt_token');
+    const options = token ? { headers: { 'Authorization': `Bearer ${token}` } } : {};
+    return this.http.delete(`${this.apiURL}/${id}`, options);
+  }
+
+  getUsers(): Observable<User[]> {
+    const token = localStorage.getItem('jwt_token');
+    const options = token ? { headers: { 'Authorization': `Bearer ${token}` } } : {};
+    return this.http.get<User[]>('https://localhost:7028/api/User', options);
+  }
+
+  assignBug(bugId: number, userId: number): Observable<any> {
+    const token = localStorage.getItem('jwt_token');
+    const options = token ? { headers: { 'Authorization': `Bearer ${token}` } } : {};
+    return this.http.patch(`${this.apiURL}/${bugId}/assign`, { assignedToUserId: userId }, options);
+  }
+
+  updateBugStatus(bugId: number, status: string): Observable<any> {
+    const token = localStorage.getItem('jwt_token');
+    const options = token ? { headers: { 'Authorization': `Bearer ${token}` } } : {};
+    return this.http.patch(`${this.apiURL}/${bugId}/status`, { status }, options);
+  }
+
+  addComment(bugId: number, comment: Omit<Comment, "id" | "createdAt">): Observable<Comment> {
+    const token = localStorage.getItem("jwt_token");
+    const options = token ? { headers: { Authorization: `Bearer ${token}` } } : {};
+    return this.http.post<Comment>(`${this.apiURL}/${bugId}/comments`, comment, options);
+  }
+
+  getBugStats(): Observable<BugStats> {
+    const token = localStorage.getItem('jwt_token');
+    const options = token ? { headers: { 'Authorization': `Bearer ${token}` } } : {};
+    return this.http.get<BugStats>(`${this.apiURL}/stats`, options);
+  }
+
+  testAuth(): Observable<any> {
+    const token = localStorage.getItem('jwt_token');
+    const options = token ? { headers: { 'Authorization': `Bearer ${token}` } } : {};
+    return this.http.get(`${this.apiURL}/me`, options);
+  }
+}

@@ -1,0 +1,180 @@
+<div class="dashboard fade-in">
+  <div class="dashboard-header">
+    <h2>{{isAdmin ? 'Admin Dashboard' : 'Dashboard Overview'}}</h2>
+  </div>
+  
+  <div class="dashboard-content" *ngIf="!isAdmin">
+    <p-card class="stats-card slide-in">
+      <div class="stats-number">42</div>
+      <div class="stats-label">Total Projects</div>
+    </p-card>
+    <p-card class="stats-card slide-in">
+      <div class="stats-number">18</div>
+      <div class="stats-label">Completed Tasks</div>
+    </p-card>
+    <p-card class="stats-card slide-in">
+      <div class="stats-number">7</div>
+      <div class="stats-label">Pending Issues</div>
+    </p-card>
+  </div>
+
+  <div class="admin-dashboard" *ngIf="isAdmin">
+    <!-- Welcome Section -->
+    <div class="welcome-section">
+      <div class="welcome-content">
+        <h3>Welcome back, Admin!</h3>
+        <p>Here's your system overview for today</p>
+      </div>
+      <div class="date-info">
+        <span class="current-date">{{getCurrentDate()}}</span>
+      </div>
+    </div>
+
+    <!-- Key Metrics -->
+    <div class="stats-overview" *ngIf="stats">
+      <p-card class="stat-card total-bugs">
+        <div class="stat-icon">
+          <i class="pi pi-bug"></i>
+        </div>
+        <div class="stat-content">
+          <div class="stat-number">{{stats.totalBugs}}</div>
+          <div class="stat-label">Total Bugs</div>
+          <div class="stat-trend">+5% from last week</div>
+        </div>
+      </p-card>
+      
+      <p-card class="stat-card open-bugs">
+        <div class="stat-icon">
+          <i class="pi pi-exclamation-triangle"></i>
+        </div>
+        <div class="stat-content">
+          <div class="stat-number">{{stats.openVsResolved.open}}</div>
+          <div class="stat-label">Open Bugs</div>
+          <div class="stat-trend">+3% from last week</div>
+        </div>
+      </p-card>
+      
+      <p-card class="stat-card high-priority">
+        <div class="stat-icon">
+          <i class="pi pi-exclamation-circle"></i>
+        </div>
+        <div class="stat-content">
+          <div class="stat-number">{{highPriorityCount}}</div>
+          <div class="stat-label">High Priority</div>
+          <div class="stat-trend">Needs attention</div>
+        </div>
+      </p-card>
+      
+      <p-card class="stat-card unassigned">
+        <div class="stat-icon">
+          <i class="pi pi-user-minus"></i>
+        </div>
+        <div class="stat-content">
+          <div class="stat-number">{{unassignedCount}}</div>
+          <div class="stat-label">Unassigned</div>
+          <div class="stat-trend">Awaiting assignment</div>
+        </div>
+      </p-card>
+
+    </div>
+
+    <!-- Charts Section -->
+    <div class="charts-section" *ngIf="stats">
+      <div class="section-header">
+        <h3>Analytics & Reports</h3>
+        <p-button label="Export Report" icon="pi pi-download" class="p-button-outlined"></p-button>
+      </div>
+      
+      <div class="charts-grid">
+        <p-card class="chart-card primary-chart">
+          <div class="chart-header">
+            <h4>Bug Status Distribution</h4>
+            <p-button icon="pi pi-ellipsis-v" class="p-button-text p-button-sm"></p-button>
+          </div>
+          <p-chart type="pie" [data]="pieData" [options]="chartOptions" height="300px"></p-chart>
+        </p-card>
+        
+        <p-card class="chart-card">
+          <div class="chart-header">
+            <h4>Bugs by Status</h4>
+            <p-button icon="pi pi-ellipsis-v" class="p-button-text p-button-sm"></p-button>
+          </div>
+          <p-chart type="bar" [data]="barData" [options]="chartOptions" height="300px"></p-chart>
+        </p-card>
+        
+        <p-card class="chart-card">
+          <div class="chart-header">
+            <h4>Priority Breakdown</h4>
+            <p-button icon="pi pi-ellipsis-v" class="p-button-text p-button-sm"></p-button>
+          </div>
+          <p-chart type="doughnut" [data]="doughnutData" [options]="chartOptions" height="300px"></p-chart>
+        </p-card>
+        
+        <p-card class="chart-card">
+          <div class="chart-header">
+            <h4>Bugs by Project</h4>
+            <p-button icon="pi pi-ellipsis-v" class="p-button-text p-button-sm"></p-button>
+          </div>
+          <p-chart type="bar" [data]="projectData" [options]="chartOptions" height="300px"></p-chart>
+        </p-card>
+        
+        <p-card class="chart-card">
+          <div class="chart-header">
+            <h4>Assignment Distribution</h4>
+            <p-button icon="pi pi-ellipsis-v" class="p-button-text p-button-sm"></p-button>
+          </div>
+          <p-chart type="bar" [data]="assignmentData" [options]="chartOptions" height="300px"></p-chart>
+        </p-card>
+      </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="quick-actions-section">
+      <div class="section-header">
+        <h3>Quick Actions</h3>
+      </div>
+      <div class="actions-grid">
+        <p-card class="action-card">
+          <div class="action-content">
+            <i class="pi pi-plus action-icon"></i>
+            <h4>Create Bug Report</h4>
+            <p>Report a new bug or issue</p>
+            <p-button label="Create" class="p-button-sm"></p-button>
+          </div>
+        </p-card>
+        
+        <p-card class="action-card">
+          <div class="action-content">
+            <i class="pi pi-users action-icon"></i>
+            <h4>Manage Users</h4>
+            <p>Add or modify user accounts</p>
+            <p-button label="Manage" class="p-button-sm"></p-button>
+          </div>
+        </p-card>
+        
+        <p-card class="action-card">
+          <div class="action-content">
+            <i class="pi pi-cog action-icon"></i>
+            <h4>System Settings</h4>
+            <p>Configure system preferences</p>
+            <p-button label="Settings" class="p-button-sm"></p-button>
+          </div>
+        </p-card>
+        
+        <p-card class="action-card">
+          <div class="action-content">
+            <i class="pi pi-chart-line action-icon"></i>
+            <h4>View Reports</h4>
+            <p>Generate detailed analytics</p>
+            <p-button label="Reports" class="p-button-sm"></p-button>
+          </div>
+        </p-card>
+      </div>
+    </div>
+
+    <div *ngIf="!stats" class="loading-state">
+      <i class="pi pi-spin pi-spinner loading-icon"></i>
+      <p>Loading admin statistics...</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,131 @@
+<div class="bugs-page">
+  <div class="dashboard-header">
+    <h2>Bug Tracker</h2>
+    <p-button label="Report New Bug" [raised]="true" class="p-button-primary" (onClick)="navigateToNewBug()"></p-button>
+  </div>
+  
+  <p-card>
+    <p-table #dt
+      [value]="bugs" 
+      [paginator]="true" 
+      [rows]="10" 
+      [rowsPerPageOptions]="[5, 10, 20]" 
+      [loading]="loading"
+      [globalFilterFields]="['title', 'description', 'status', 'priority']"
+      [sortField]="'createdOn'"
+      [sortOrder]="-1"
+      styleClass="p-datatable-striped">
+      
+      <ng-template pTemplate="caption">
+        <div class="table-header">
+          <div class="filter-row">
+            <div class="filter-item">
+              <span class="p-input-icon-left">
+                <i class="pi pi-search"></i>
+                <input pInputText type="text" #searchInput (input)="dt.filterGlobal(searchInput.value, 'contains')" placeholder="Search bugs..." />
+              </span>
+            </div>
+            <div class="filter-item">
+              <input pInputText type="text" (input)="dt.filter($any($event.target).value, 'title', 'contains')" placeholder="Filter by title" />
+            </div>
+            <div class="filter-item">
+              <p-dropdown [options]="statusOptions" optionLabel="label" optionValue="value" [(ngModel)]="filterStatus" (onChange)="dt.filter($event.value, 'status', 'equals')" placeholder="All Status" [showClear]="true"></p-dropdown>
+            </div>
+            <div class="filter-item">
+              <p-dropdown [options]="priorityOptions" optionLabel="label" optionValue="value" [(ngModel)]="selectedPriority" (onChange)="dt.filter($event.value, 'priority', 'equals')" placeholder="All Priority" [showClear]="true"></p-dropdown>
+            </div>
+            <div class="filter-item reset-item">
+              <p-button label="Reset Filters" icon="pi pi-refresh" (onClick)="resetFilters()" class="p-button-outlined reset-btn"></p-button>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+      
+      <ng-template pTemplate="header">
+        <tr>
+          <th pSortableColumn="id">ID <p-sortIcon field="id"></p-sortIcon></th>
+          <th pSortableColumn="title">Title <p-sortIcon field="title"></p-sortIcon></th>
+          <th pSortableColumn="status">Status <p-sortIcon field="status"></p-sortIcon></th>
+          <th pSortableColumn="priority">Priority <p-sortIcon field="priority"></p-sortIcon></th>
+          <th pSortableColumn="createdOn">Created <p-sortIcon field="createdOn"></p-sortIcon></th>
+          <th pSortableColumn="projectId">Project <p-sortIcon field="projectId"></p-sortIcon></th>
+          <th>Assigned To</th>
+          <th>{{isTester() ? 'Change Status' : 'Actions'}}</th>
+        </tr>
+
+      </ng-template>
+      
+      <ng-template pTemplate="body" let-bug>
+        <tr>
+          <td>#{{bug.id}}</td>
+          <td>
+            <div class="bug-title-cell">
+              <strong class="clickable-title" (click)="viewBugDetail(bug.id)">{{bug.title}}</strong>
+              <div class="bug-description">{{bug.description}}</div>
+            </div>
+          </td>
+          <td><p-tag [value]="bug.status" [severity]="getSeverity(bug.status)"></p-tag></td>
+          <td><p-tag [value]="bug.priority" [severity]="getPrioritySeverity(bug.priority)"></p-tag></td>
+          <td>{{bug.createdOn | date:'short'}}</td>
+          <td>{{getProjectName(bug.projectId)}}</td>
+          <td>
+            <p-tag 
+              [value]="bug.assignedToUserId ? 'Assigned' : 'Unassigned'" 
+              [severity]="bug.assignedToUserId ? 'success' : 'warning'">
+            </p-tag>
+          </td>
+          <td>
+            <p-button *ngIf="!isTester()" icon="pi pi-pencil" [text]="true" (onClick)="editBug(bug.id)" title="Edit Bug"></p-button>
+            <p-button *ngIf="canUpdateStatus()" icon="pi pi-cog" [text]="true" (onClick)="updateStatus(bug.id)" title="Update Status"></p-button>
+            <p-button *ngIf="isAdmin()" icon="pi pi-user-plus" [text]="true" (onClick)="assignBug(bug.id)" title="Assign Bug"></p-button>
+            <p-button *ngIf="isAdmin()" icon="pi pi-trash" [text]="true" severity="danger" (onClick)="deleteBug(bug.id)" title="Delete Bug"></p-button>
+          </td>
+        </tr>
+      </ng-template>
+      
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="8" class="text-center">No bugs found.</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
+
+  <!-- Assignment Dialog -->
+  <p-dialog header="Assign Bug" [(visible)]="showAssignDialog" [modal]="true" [closable]="true" [draggable]="false" [focusOnShow]="false" [style]="{width: '400px', height: '400px'}" (onHide)="closeAssignDialog()">
+    <div class="assign-dialog">
+      <label for="userSelect" style="display: inline-block; margin-right: 10px;">Select User:</label>
+      <p-dropdown 
+        id="userSelect"
+        [options]="users" 
+        optionLabel="username" 
+        optionValue="id" 
+        placeholder="Select User"
+        scrollHeight="300px"
+        (onChange)="onAssignUser($event.value)">
+      </p-dropdown>
+    </div>
+  </p-dialog>
+
+  <!-- Status Update Dialog -->
+  <p-dialog header="Update Bug Status" [(visible)]="showStatusDialog" [modal]="true" [closable]="true" [draggable]="false" [focusOnShow]="false" [style]="{width: '600px', height: '400px'}" (onHide)="closeStatusDialog()">
+    <div class="status-dialog">
+      <label for="statusSelect" style="display: block; margin-bottom: 10px;">Select Status:</label>
+      <p-dropdown 
+        id="statusSelect"
+        [options]="statusOptions.slice(1)" 
+        optionLabel="label" 
+        optionValue="value" 
+        [(ngModel)]="selectedStatus"
+        placeholder="Select Status"
+        [style]="{'width': '100%', 'margin-bottom': '20px'}">
+      </p-dropdown>
+      <div class="dialog-buttons">
+        <p-button label="Cancel" [text]="true" (onClick)="closeStatusDialog()" [style]="{'margin-right': '10px'}"></p-button>
+        <p-button label="Update" (onClick)="onUpdateStatus()" [disabled]="!selectedStatus"></p-button>
+      </div>
+    </div>
+  </p-dialog>
+
+
+</div>
